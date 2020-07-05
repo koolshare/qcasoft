@@ -1,0 +1,4 @@
+Koolshare qca softeware center Changelog
+===========================================
+1.0.0
+   - add	add RT-AX89X support.

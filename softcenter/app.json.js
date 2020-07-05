@@ -1,0 +1,272 @@
+{
+    "apps": [
+        {
+            "build_date": "2020-07-05_10:23:04", 
+            "changelog": "", 
+            "description": "自动部署SSL证书", 
+            "home_url": "Module_acme.asp", 
+            "md5": "3889ad87de414eaac791a987f21caf50", 
+            "name": "acme", 
+            "tar_url": "acme/acme.tar.gz", 
+            "title": "Let's Encrypt", 
+            "version": "3.2"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:04", 
+            "changelog": "", 
+            "description": "aliddns", 
+            "home_url": "Module_aliddns.asp", 
+            "md5": "ae4a0c3305b135f17648aaab4db87020", 
+            "name": "aliddns", 
+            "tar_url": "aliddns/aliddns.tar.gz", 
+            "title": "阿里DDNS", 
+            "version": "2.1"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:04", 
+            "changelog": "", 
+            "description": "linux下载利器", 
+            "home_url": "Module_aria2.asp", 
+            "md5": "f7e0366557fd731dc2fdddd00159912c", 
+            "name": "aria2", 
+            "tar_url": "aria2/aria2.tar.gz", 
+            "title": "aria2", 
+            "version": "2.2"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:04", 
+            "changelog": "", 
+            "description": "CloudFlare DDNS", 
+            "home_url": "Module_cfddns.asp", 
+            "md5": "190587195b0d15a8e347e2efa7c12ace", 
+            "name": "cfddns", 
+            "tar_url": "cfddns/cfddns.tar.gz", 
+            "title": "CloudFlare DDNS", 
+            "version": "1.0"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:04", 
+            "changelog": "", 
+            "description": "ddnspod", 
+            "home_url": "Module_ddnspod.asp", 
+            "md5": "20fb1bbeccc42b0b8b7f327903bf4676", 
+            "name": "ddnspod", 
+            "tar_url": "ddnspod/ddnspod.tar.gz", 
+            "title": "ddnspod", 
+            "version": "1.5"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:04", 
+            "changelog": "", 
+            "description": "ddnsto内网穿透", 
+            "home_url": "Module_ddnsto.asp", 
+            "md5": "8efa1f243a559326fb68a667bf354b0c", 
+            "name": "ddnsto", 
+            "tar_url": "ddnsto/ddnsto.tar.gz", 
+            "title": "ddnsto", 
+            "version": "2.0"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:04", 
+            "changelog": "", 
+            "description": "易有云 （EasyExplorer） 跨平台文件同步，支持双向同步！", 
+            "home_url": "Module_easyexplorer.asp", 
+            "md5": "ac2ee487164b417dc0c237621a0d30ab", 
+            "name": "easyexplorer", 
+            "tar_url": "easyexplorer/easyexplorer.tar.gz", 
+            "title": "易有云", 
+            "version": "2.4"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:04", 
+            "changelog": "", 
+            "description": "迅雷快鸟，上网必备神器", 
+            "home_url": "Module_fastd1ck.asp", 
+            "md5": "e16dbd407058651fddd82a6b1c017e6d", 
+            "name": "fastd1ck", 
+            "tar_url": "fastd1ck/fastd1ck.tar.gz", 
+            "title": "迅雷快鸟", 
+            "version": "1.6"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:04", 
+            "changelog": "", 
+            "description": "支持多种协议的内网穿透软件", 
+            "home_url": "Module_frpc.asp", 
+            "md5": "41d4a52ebc8b56363d461a6a733ac5dc", 
+            "name": "frpc", 
+            "tar_url": "frpc/frpc.tar.gz", 
+            "title": "frpc内网穿透", 
+            "version": "1.6"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:04", 
+            "changelog": "", 
+            "description": "kms", 
+            "home_url": "Module_kms.asp", 
+            "md5": "97f48a594c02686c2938abeabba1409e", 
+            "name": "kms", 
+            "tar_url": "kms/kms.tar.gz", 
+            "title": "系统工具", 
+            "version": "1.5"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:04", 
+            "changelog": "", 
+            "description": "KP: Kids Protect，互联网内容过滤，保护未成年人上网~", 
+            "home_url": "Module_koolproxy.asp", 
+            "md5": "6e6b283fbe296c42d2ddd26261344e90", 
+            "name": "koolproxy", 
+            "tar_url": "koolproxy/koolproxy.tar.gz", 
+            "title": "KidsProtect", 
+            "version": "3.8.4.1"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:05", 
+            "changelog": "", 
+            "description": "pppoe单线多拨，带宽提升神器！", 
+            "home_url": "Module_mdial.asp", 
+            "md5": "555abc0d75839ebaa59ee295878b9d34", 
+            "name": "mdial", 
+            "tar_url": "mdial/mdial.tar.gz", 
+            "title": "单线多拨", 
+            "version": "1.3"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:05", 
+            "changelog": "", 
+            "description": "通过pushplus将路由器状态推送到微信上", 
+            "home_url": "Module_pushplus.asp", 
+            "md5": "d861bd4865248aec237a9f66992b3cca", 
+            "name": "pushplus", 
+            "tar_url": "pushplus/pushplus.tar.gz", 
+            "title": "pushplus全能推送", 
+            "version": "0.3"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:05", 
+            "changelog": "", 
+            "description": "自动签到", 
+            "home_url": "Module_qiandao.asp", 
+            "md5": "7b6676e964ad95d5fa474098fa6a89ae", 
+            "name": "qiandao", 
+            "tar_url": "qiandao/qiandao.tar.gz", 
+            "title": "自动签到", 
+            "version": "1.5"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:05", 
+            "changelog": "", 
+            "description": "解决重启Bug", 
+            "home_url": "Module_reboothelper.asp", 
+            "md5": "6f6e1ee7dc02d335245556230449924e", 
+            "name": "reboothelper", 
+            "tar_url": "reboothelper/reboothelper.tar.gz", 
+            "title": "重启助手", 
+            "version": "0.6"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:05", 
+            "changelog": "", 
+            "description": "一些小功能的插件", 
+            "home_url": "Module_rog.asp", 
+            "md5": "788dc24b99e5d5ce532c2163cb1c4499", 
+            "name": "rog", 
+            "tar_url": "rog/rog.tar.gz", 
+            "title": "ROG工具箱", 
+            "version": "3.5"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:05", 
+            "changelog": "", 
+            "description": "从路由器推送状态及通知的工具", 
+            "home_url": "Module_routerhook.asp", 
+            "md5": "6648ab3a1c6dad874214738fd49cd739", 
+            "name": "routerhook", 
+            "tar_url": "routerhook/routerhook.tar.gz", 
+            "title": "RouterHook事件回调", 
+            "version": "1.2"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:05", 
+            "changelog": "", 
+            "description": "从路由器推送状态及通知的工具", 
+            "home_url": "Module_serverchan.asp", 
+            "md5": "c9545d86006f56e0dd2773d187b4c8f4", 
+            "name": "serverchan", 
+            "tar_url": "serverchan/serverchan.tar.gz", 
+            "title": "serverChan微信推送", 
+            "version": "1.4"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:05", 
+            "changelog": "", 
+            "description": "超强的SSH网页客户端~", 
+            "home_url": "Module_shellinabox.asp", 
+            "md5": "cf1ce825453646e123ea62b9fd66a1e3", 
+            "name": "shellinabox", 
+            "tar_url": "shellinabox/shellinabox.tar.gz", 
+            "title": "shellinabox", 
+            "version": "1.5"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:05", 
+            "changelog": "", 
+            "description": "上海电信IPTV，4K IPTV 一键开启", 
+            "home_url": "Module_shiptv.asp", 
+            "md5": "f647f654788beb84ff29e9ce73537aa2", 
+            "name": "shiptv", 
+            "tar_url": "shiptv/shiptv.tar.gz", 
+            "title": "上海电信IPTV", 
+            "version": "1.1"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:05", 
+            "changelog": "", 
+            "description": "VPN全家桶, ver 4.29 build 9680", 
+            "home_url": "Module_softether.asp", 
+            "md5": "e481557b83619f62d018b2fee7420ec5", 
+            "name": "softether", 
+            "tar_url": "softether/softether.tar.gz", 
+            "title": "SoftEther_VPN_Server", 
+            "version": "1.9"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:05", 
+            "changelog": "", 
+            "description": "让路由器运行更稳定~", 
+            "home_url": "Module_swap.asp", 
+            "md5": "714d28471102babea1651d6b672dcf8f", 
+            "name": "swap", 
+            "tar_url": "swap/swap.tar.gz", 
+            "title": "虚拟内存", 
+            "version": "2.0"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:05", 
+            "changelog": "", 
+            "description": "轻松用U盘挂载jffs", 
+            "home_url": "Module_usb2jffs.asp", 
+            "md5": "7431d2a709e8709c64ee36fad09be95d", 
+            "name": "usb2jffs", 
+            "tar_url": "usb2jffs/usb2jffs.tar.gz", 
+            "title": "USB2JFFS", 
+            "version": "1.6"
+        }, 
+        {
+            "build_date": "2020-07-05_10:23:05", 
+            "changelog": "", 
+            "description": "wifi boost 路由器功率增强，强过澳大利亚", 
+            "home_url": "Module_wifiboost.asp", 
+            "md5": "c0a46d3159ed15d60a10c0e5351c9ed8", 
+            "name": "wifiboost", 
+            "tar_url": "wifiboost/wifiboost.tar.gz", 
+            "title": "wifi boost", 
+            "version": "1.5"
+        }
+    ], 
+    "home_url": "https://raw.githubusercontent.com/koolshare/koolshare.github.io/master", 
+    "md5": "2abdd97fa511cd870ddab7d9b3a5b085", 
+    "tar_url": "softcenter/softcenter.tar.gz", 
+    "version": "1.0.0"
+}
