@@ -1234,7 +1234,7 @@ function openkpHint(itemNum) {
 															</label>
 														</div>
 														<div style="display:table-cell;float: left;margin-left:270px;margin-top:-32px;position: absolute;padding: 5.5px 0px;">
-															<a type="button" class="kp_btn" target="_blank" href="https://github.com/koolshare/rogsoft/blob/master/koolproxy/Changelog.txt">更新日志</a>
+															<a type="button" class="kp_btn" target="_blank" href="https://github.com/koolshare/qcasoft/blob/master/koolproxy/Changelog.txt">更新日志</a>
 														</div>
 													</td>
 												</tr>

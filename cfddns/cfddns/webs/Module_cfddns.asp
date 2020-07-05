@@ -337,7 +337,7 @@ function reload_Soft_Center(){
 															</label>
 														</div>
 														<div style="display:table-cell;float: left;margin-left:270px;margin-top:-32px;position: absolute;padding: 5.5px 0px;">
-															<a type="button" class="ss_btn" target="_blank" href="https://github.com/koolshare/rogsoft/blob/master/cfddns/Changelog.txt">更新日志</a>
+															<a type="button" class="ss_btn" target="_blank" href="https://github.com/koolshare/qcasoft/blob/master/cfddns/Changelog.txt">更新日志</a>
 														</div>
 													</td>
 												</tr>

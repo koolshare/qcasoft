@@ -537,7 +537,7 @@ function reload_Soft_Center(){
 															</label>
 														</div>
 														<div style="display:table-cell;float: left;margin-left:270px;margin-top:-32px;position: absolute;padding: 5.5px 0px;">
-															<a type="button" class="ss_btn" target="_blank" href="https://github.com/koolshare/rogsoft/blob/master/fastd1ck/Changelog.txt">更新日志</a>
+															<a type="button" class="ss_btn" target="_blank" href="https://github.com/koolshare/qcasoft/blob/master/fastd1ck/Changelog.txt">更新日志</a>
 														</div>
 													</td>
 												</tr>
@@ -665,7 +665,7 @@ function reload_Soft_Center(){
 														<li>本插件是对<a href="https://github.com/sensec/luci-app-xlnetacc" target="_blank" ><i><u>luci-app-xlnetacc</u></i></a>项目的移植，感谢原作<a href="https://github.com/sensec" target="_blank" ><i><u>sensec</u></i></a>！</li>
 														<li>为了方便移植，本插件使用jq笨拙的模拟了jshn函数，用法不完全一样。</li>
 														<li>迅雷快鸟提速主脚本为在/jffs/koolshare/fastd1ck_main.sh，有能力的可以自行调试修改。</li>
-														<li>本插件的维护地址在<a href="https://github.com/koolshare/rogsoft" target="_blank" ><i><u>https://github.com/koolshare/rogsoft</u></i></a>，欢迎到此反馈问题！</li>
+														<li>本插件的维护地址在<a href="https://github.com/koolshare/qcasoft" target="_blank" ><i><u>https://github.com/koolshare/qcasoft</u></i></a>，欢迎到此反馈问题！</li>
 													</ul>
 												</td>
 												</tr>
@@ -677,7 +677,7 @@ function reload_Soft_Center(){
 										</div>
 										<div class="KoolshareBottom">
 											论坛技术支持： <a href="http://www.koolshare.cn" target="_blank"> <i><u>www.koolshare.cn</u></i> </a> <br/>
-											Github项目： <a href="https://github.com/koolshare/rogsoft" target="_blank"> <i><u>github.com/koolshare/rogsoft</u></i> </a> <br/>
+											Github项目： <a href="https://github.com/koolshare/qcasoft" target="_blank"> <i><u>github.com/koolshare/qcasoft</u></i> </a> <br/>
 											Shell by： <i>sensec, modified by sadog</i>
 										</div>
 									</td>

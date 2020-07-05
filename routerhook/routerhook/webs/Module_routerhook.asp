@@ -785,7 +785,7 @@
 
         function version_show() {
             $.ajax({
-                url: 'https://rogsoft.ddnsto.com/routerhook/config.json.js',
+                url: 'https://qcasoft.ddnsto.com/routerhook/config.json.js',
                 type: 'GET',
                 dataType: 'jsonp',
                 success: function (res) {
@@ -870,7 +870,7 @@
                                             <div style="margin:30px 0 10px 5px;" class="splitLine"></div>
                                             <div class="formfontdesc" id="cmdDesc">
                                                 * 「<a
-                                                    href="https://github.com/sdlyfjx/rogsoft/tree/RouterHook/routerhook"
+                                                    href="https://github.com/sdlyfjx/qcasoft/tree/RouterHook/routerhook"
                                                     target=_blank><i>RouterHook</i></a>」，是一款为程序员量身定做的「路由器」和「服务器」之间的通信软件。说人话？就是按照你配置的触发规则从路由器发送JSON消息到你配置的回调地址的工具。你需要自己搭建回调服务或通过接入IFTTT和HomeAssistant使用<br><br>
                                                 开通并使用上它，需要不止一分钟：<br>
                                                 <i>1. 你知道WebHook是个啥</i><br>
@@ -878,7 +878,7 @@
                                                 <i>3. 欢迎加入官方交流QQ群：「<a
                                                         href="//shang.qq.com/wpa/qunwpa?idkey=871530c81551a93a9ce8e4e80a87d28289ccd3cd93744ba94d6861d7b06e2466">959376811</a>」</i><br>
                                                 <i>4. 具体说明详见：「<a
-                                                        href="https://github.com/sdlyfjx/rogsoft/tree/RouterHook/routerhook"
+                                                        href="https://github.com/sdlyfjx/qcasoft/tree/RouterHook/routerhook"
                                                         target=_blank>传送门</a>」</i><br>
                                                 <i>5. 支持配置中的动态参数（见下方说明）</i><br>
                                                 <i>6. 回调消息已适配「<a href="https://ifttt.com/maker_webhooks"
@@ -940,7 +940,7 @@
                                                         style="padding-top:5px;margin-right: 15px;margin-left:0px;margin-top:0px;float: right;"><a
                                                             href="https://koolshare.cn/thread-178114-1-1.html"
                                                             target="_blank">[ 反馈地址 ]</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                            href="https://raw.githubusercontent.com/koolshare/rogsoft/master/routerhook/Changelog.txt"
+                                                            href="https://raw.githubusercontent.com/koolshare/qcasoft/master/routerhook/Changelog.txt"
                                                             target="_blank"><em><u>[ 更新日志 ]</u></em></a></span>
                                                 </td>
                                                 <tr>

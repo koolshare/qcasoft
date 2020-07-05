@@ -237,7 +237,7 @@ function appPostScript(moduleInfo, script) {
 	var data = {};
 	//currState.name = moduleInfo.name;
 	//TODO auto choose for home_url
-	data["softcenter_home_url"] = "https://rogsoft.ddnsto.com";
+	data["softcenter_home_url"] = "https://qcasoft.ddnsto.com";
 	data["softcenter_installing_todo"] = moduleInfo.name;
 	if (script == "ks_app_install.sh") {
 		data["softcenter_installing_tar_url"] = moduleInfo.tar_url;
@@ -513,9 +513,9 @@ function init(cb) {
 				});
 				// icon 规则:
 				// 如果已安装的插件,那图标必定在 /koolshare/res 目录, 通过 /res/icon-{name}.png 请求路径得到图标
-				// 如果是未安装的插件,则必定在 https://rogsoft.ddnsto.com/{name}/{name}/icon-{name}.png
+				// 如果是未安装的插件,则必定在 https://qcasoft.ddnsto.com/{name}/{name}/icon-{name}.png
 				// TODO 如果因为一些错误导致没有图标, 有可能显示一张默认图标吗?
-				item.icon = parseInt(item.install, 10) !== 0 ? ('/res/icon-' + item.name + '.png') : ('https://rogsoft.ddnsto.com' + new Array(3).join('/softcenter') + '/res/icon-' + item.name + '.png');
+				item.icon = parseInt(item.install, 10) !== 0 ? ('/res/icon-' + item.name + '.png') : ('https://qcasoft.ddnsto.com' + new Array(3).join('/softcenter') + '/res/icon-' + item.name + '.png');
 			});
 			return result;
 		};
@@ -558,7 +558,7 @@ $(function() {
 		cache: false,
 		success: function(response) {
 			db_softcenter_ = response.result[0];
-			db_softcenter_["softcenter_home_url"] = "https://rogsoft.ddnsto.com";
+			db_softcenter_["softcenter_home_url"] = "https://qcasoft.ddnsto.com";
 			if (!db_softcenter_["softcenter_version"]) {
 				db_softcenter_["softcenter_version"] = "0.0";
 			}
@@ -615,7 +615,7 @@ function menu_hook() {
 }
 function notice_show() {
 	$.ajax({
-		url: 'https://rogsoft.ddnsto.com/softcenter/push_message.json.js',
+		url: 'https://qcasoft.ddnsto.com/softcenter/push_message.json.js',
 		type: 'GET',
 		dataType: 'jsonp',
 		success: function(res) {
@@ -676,7 +676,7 @@ function notice_show() {
 																				<ul style="padding-left:25px;">
 																					<h2 id="push_titile"><em>软件中心&nbsp;-&nbsp;by&nbsp;koolshare</em></h2>
 																					<li>
-																						<h4 id="push_content1" ><font color='#1E90FF'>交流反馈:&nbsp;&nbsp;</font><a href='https://github.com/koolshare/rogsoft' target='_blank'><em>1.软件中心GitHub项目</em></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://t.me/xbchat' target='_blank'><em>2.加入telegram群</em></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='http://shang.qq.com/wpa/qunwpa?idkey=f475468129ba8019245425559b5df5bdad7d7201ac7780417dd0218bbb4e1322' target='_blank'><em>3.加入QQ群</em></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='http://koolshare.cn/forum-98-1.html' target='_blank'><em>4.Koolshare论坛插件版块</em></a></h4>
+																						<h4 id="push_content1" ><font color='#1E90FF'>交流反馈:&nbsp;&nbsp;</font><a href='https://github.com/koolshare/qcasoft' target='_blank'><em>1.软件中心GitHub项目</em></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://t.me/xbchat' target='_blank'><em>2.加入telegram群</em></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='http://shang.qq.com/wpa/qunwpa?idkey=f475468129ba8019245425559b5df5bdad7d7201ac7780417dd0218bbb4e1322' target='_blank'><em>3.加入QQ群</em></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='http://koolshare.cn/forum-98-1.html' target='_blank'><em>4.Koolshare论坛插件版块</em></a></h4>
 																					</li>
 																					<li id="push_content2_li" style="display: none;">
 																						<h4 id="push_content2"></h4>
@@ -729,7 +729,7 @@ function notice_show() {
 													</table>
 												<div class="KoolshareBottom">
 													论坛技术支持: <a href="https://koolshare.cn" target="_blank"> <i><u>https://koolshare.cn</u></i></a><br />
-													GitHub: <a href="https://github.com/koolshare/rogsoft" target="_blank"><i><u>https://github.com/koolshare</u></i></a><br />
+													GitHub: <a href="https://github.com/koolshare/qcasoft" target="_blank"><i><u>https://github.com/koolshare</u></i></a><br />
 													Shell & Web by: <a href="mailto:sadoneli@gmail.com"><i>sadoneli</i></a>, <i>Xiaobao</i>
 												</div>
 											</td>

@@ -591,7 +591,7 @@ function donate(w){
 										<div style="margin:30px 0 10px 5px;" class="splitLine"></div>
 										<div style="margin-left:5px;" id="head_illustrate">
 											<li>使用USB2JFFS插件，轻松用U盘挂载系统JFFS分区。
-											<a type="button" href="https://github.com/koolshare/rogsoft/blob/master/usb2jffs/Changelog.txt" target="_blank" class="ks_btn" style="cursor: pointer;margin-left:5px;border:none" >更新日志</a>
+											<a type="button" href="https://github.com/koolshare/qcasoft/blob/master/usb2jffs/Changelog.txt" target="_blank" class="ks_btn" style="cursor: pointer;margin-left:5px;border:none" >更新日志</a>
 											<a type="button" href="javascript:void(0);" class="ks_btn" style="cursor: pointer;margin-left:5px;border:none" onclick="donate(1)">捐赠狗粮</a>
 											</li>
 										</div>
@@ -699,7 +699,7 @@ function donate(w){
 														<h4><i>插件说明</i></h4>
 															&nbsp;&nbsp;&nbsp;&nbsp;1. 使用USB2JFFS插件，轻松用U盘挂载系统JFFS分区。<br />
 															&nbsp;&nbsp;&nbsp;&nbsp;2. 部分实现参考了：<a href="https://koolshare.cn/thread-161017-1-1.html" title="" target="_blank"><em>此koolshare论坛贴</em></a>，不过已经大不相同。<br />
-															&nbsp;&nbsp;&nbsp;&nbsp;3. 插件GITHUB开源地址：<a href="https://github.com/koolshare/rogsoft/tree/master/usb2jffs" title="" target="_blank"><em>https://github.com/koolshare/rogsoft/tree/master/usb2jffs</em></a><br />
+															&nbsp;&nbsp;&nbsp;&nbsp;3. 插件GITHUB开源地址：<a href="https://github.com/koolshare/qcasoft/tree/master/usb2jffs" title="" target="_blank"><em>https://github.com/koolshare/qcasoft/tree/master/usb2jffs</em></a><br />
 															&nbsp;&nbsp;&nbsp;&nbsp;4. 如果你觉得插件好用，可以考虑<a type="button" href="javascript:void(0);" class="ks_btn" style="cursor: pointer;margin-left:5px;border:none" onclick="donate(1)">捐赠开发者</a><br />
 														<h4><i>插件使用</i></h4>
 															&nbsp;&nbsp;&nbsp;&nbsp;1. 使用本插件，你需要提前准备一个已经格式化成ext3/ext4格式的U盘。<br />

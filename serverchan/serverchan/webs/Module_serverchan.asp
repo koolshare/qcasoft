@@ -511,7 +511,7 @@ function oncheckclick(obj) {
 
 function version_show() {
 	$.ajax({
-		url: 'https://rogsoft.ddnsto.com/serverchan/config.json.js',
+		url: 'https://qcasoft.ddnsto.com/serverchan/config.json.js',
 		type: 'GET',
 		dataType: 'jsonp',
 		success: function(res) {
@@ -600,7 +600,7 @@ function version_show() {
                                         <th style="width:20%;">版本信息</th>
                                         <td>
                                             <div id="serverchan_version_show" style="padding-top:5px;margin-left:0px;margin-top:0px;float: left;"></div>
-                                            <span style="padding-top:5px;margin-right: 15px;margin-left:0px;margin-top:0px;float: right;"><a href="http://koolshare.cn/thread-123937-1-1.html" target="_blank">[ 反馈地址 ]</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/koolshare/rogsoft/master/serverchan/Changelog.txt" target="_blank"><em><u>[ 更新日志 ]</u></em></a></span>
+                                            <span style="padding-top:5px;margin-right: 15px;margin-left:0px;margin-top:0px;float: right;"><a href="http://koolshare.cn/thread-123937-1-1.html" target="_blank">[ 反馈地址 ]</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/koolshare/qcasoft/master/serverchan/Changelog.txt" target="_blank"><em><u>[ 更新日志 ]</u></em></a></span>
                                         </td>
                                         <tr>
                                             <th width="20%">消息免打扰时间</th>

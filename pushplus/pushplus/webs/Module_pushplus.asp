@@ -515,7 +515,7 @@ function oncheckclick(obj) {
 
 function version_show() {
 	$.ajax({
-		url: 'https://rogsoft.ddnsto.com/pushplus/config.json.js',
+		url: 'https://qcasoft.ddnsto.com/pushplus/config.json.js',
 		type: 'GET',
 		dataType: 'jsonp',
 		success: function(res) {
@@ -643,7 +643,7 @@ function version_show() {
                                             <th style="width:20%;">版本信息</th>
                                             <td>
                                                 <div id="pushplus_version_show" style="padding-top:5px;margin-left:0px;margin-top:0px;float: left;"></div>
-                                                <span style="padding-top:5px;margin-right: 15px;margin-left:0px;margin-top:0px;float: right;"><a href="https://pushplus.hxtrip.com/about" target="_blank">[ 联系我们 ]</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/koolshare/rogsoft/master/pushplus/Changelog.txt" target="_blank"><em><u>[ 更新日志 ]</u></em></a></span>
+                                                <span style="padding-top:5px;margin-right: 15px;margin-left:0px;margin-top:0px;float: right;"><a href="https://pushplus.hxtrip.com/about" target="_blank">[ 联系我们 ]</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/koolshare/qcasoft/master/pushplus/Changelog.txt" target="_blank"><em><u>[ 更新日志 ]</u></em></a></span>
                                             </td>                                                                                    
                                         </tr>
                                         <tr>

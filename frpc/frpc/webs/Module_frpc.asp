@@ -819,7 +819,7 @@ function openssHint(itemNum) {
                                                 </div>
                                                 <div id="frpc_version_show" style="padding-top:5px;margin-left:30px;margin-top:0px;float: left;"></div>
                                                 <div id="frpc_changelog_show" style="padding-top:5px;margin-right:10px;margin-top:0px;float: right;">
-                                                    <a type="button" class="frpc_btn" style="cursor:pointer" href="https://raw.githubusercontent.com/koolshare/rogsoft/master/frpc/Changelog.txt" target="_blank">更新日志</a> <a type="button" class="frpc_btn" style="cursor:pointer" target="_blank" href="https://github.com/fatedier/frp/blob/master/README_zh.md">自定义配置帮助</a>
+                                                    <a type="button" class="frpc_btn" style="cursor:pointer" href="https://raw.githubusercontent.com/koolshare/qcasoft/master/frpc/Changelog.txt" target="_blank">更新日志</a> <a type="button" class="frpc_btn" style="cursor:pointer" target="_blank" href="https://github.com/fatedier/frp/blob/master/README_zh.md">自定义配置帮助</a>
                                                 </div>
                                             </td>
                                         </tr>

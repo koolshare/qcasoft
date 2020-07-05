@@ -506,7 +506,7 @@ function reload_Soft_Center(){
 															</label>
 														</div>
 														<div style="display:table-cell;float: left;margin-left:270px;margin-top:-32px;position: absolute;padding: 5.5px 0px;">
-															<a type="button" class="ss_btn" target="_blank" href="https://github.com/koolshare/rogsoft/blob/master/mdial/Changelog.txt">更新日志</a>
+															<a type="button" class="ss_btn" target="_blank" href="https://github.com/koolshare/qcasoft/blob/master/mdial/Changelog.txt">更新日志</a>
 														</div>
 													</td>
 												</tr>
@@ -569,7 +569,7 @@ function reload_Soft_Center(){
 														<li>注意：本插件仅适用于koolshare RT-AC86U官改/梅林改版固件和GT-AC5300官改固件！</li>
 														<li>多拨插件需要光猫桥接，由路由器来进行pppoe拨号。</li>
 														<li>不是所有运营商都能多拨！也不是所有多拨都能叠加!</li>
-														<li>本插件的维护地址在<a href="https://github.com/koolshare/rogsoft" target="_blank" ><i><u>https://github.com/koolshare/rogsoft</u></i></a>，欢迎到此反馈问题！</li>
+														<li>本插件的维护地址在<a href="https://github.com/koolshare/qcasoft" target="_blank" ><i><u>https://github.com/koolshare/qcasoft</u></i></a>，欢迎到此反馈问题！</li>
 													</ul>
 												</td>
 												</tr>
@@ -581,7 +581,7 @@ function reload_Soft_Center(){
 										</div>
 										<div class="KoolshareBottom">
 											论坛技术支持： <a href="http://www.koolshare.cn" target="_blank"> <i><u>www.koolshare.cn</u></i> </a> <br/>
-											Github项目： <a href="https://github.com/koolshare/rogsoft" target="_blank"> <i><u>github.com/koolshare/rogsoft</u></i> </a> <br/>
+											Github项目： <a href="https://github.com/koolshare/qcasoft" target="_blank"> <i><u>github.com/koolshare/qcasoft</u></i> </a> <br/>
 											Shell&Web by： <i>sadog</i>
 										</div>
 									</td>

@@ -497,7 +497,7 @@ function pop_help() {
 			moveType: 1,
 			content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">\
 				<b>wifi boost</b><br><br>\
-				wifi boost是一款付费插件，支持hnd/axhnd/axhnd.675x平台的机器，详情：<a style="color:#e7bd16" target="_blank" href="https://github.com/koolshare/rogsoft#%E6%9C%BA%E5%9E%8B%E6%94%AF%E6%8C%81"><u>机型支持</u></a><br>\
+				wifi boost是一款付费插件，支持hnd/axhnd/axhnd.675x平台的机器，详情：<a style="color:#e7bd16" target="_blank" href="https://github.com/koolshare/qcasoft#%E6%9C%BA%E5%9E%8B%E6%94%AF%E6%8C%81"><u>机型支持</u></a><br>\
 				使用本插件有任何问题，可以前往<a style="color:#e7bd16" target="_blank" href="https://koolshare.cn/forum-98-1.html"><u>koolshare论坛插件板块</u></a>反馈~<br><br>\
 				● 微信订单号获取：<span style="color:#e7bd16">我 → 支付 → 钱包 → 账单 → 点击付款订单 → 转账单号</span><br>\
 				● 支付宝订单号获取：<span style="color:#e7bd16">我的 → 账单 → 点击付款订单 → 订单号</span><br><br>\
@@ -596,7 +596,7 @@ function pop_help() {
 											<div class="SimpleNote">
 												<span>wifi boost可以极大的增强路由器wifi的发射功率，增强信号覆盖范围。
 													<a type="button" href="https://koolshare.cn/thread-184369-1-1.html" target="_blank" class="ks_btn" style="cursor: pointer;margin-left:5px;border:none" >使用交流</a>
-													<a type="button" href="https://github.com/koolshare/rogsoft/blob/master/wifiboost/Changelog.txt" target="_blank" class="ks_btn" style="cursor: pointer;margin-left:5px;border:none" >更新日志</a>
+													<a type="button" href="https://github.com/koolshare/qcasoft/blob/master/wifiboost/Changelog.txt" target="_blank" class="ks_btn" style="cursor: pointer;margin-left:5px;border:none" >更新日志</a>
 												</span>
 											</div>
 											<div id="wifiboost_main">

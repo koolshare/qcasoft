@@ -617,7 +617,7 @@ function cal_panel_block() {
                                         <div class="SimpleNote">
                                             <li> EasyExplorer支持PC、Mac、iOS、安卓、NAS和路由器平台，iOS易有云公测中：<a href="http://koolshare.cn/thread-159997-1-1.html" target="_blank"><i>http://koolshare.cn/thread-159997-1-1.html</i></a></li>
                                             <li><i>开启方法：</i>登录控制台，注册后获得Token/令牌，填入本插件，随后选择共享目录后点击提交。</li>
-                                            <li><i>使用教程：</i><a href="http://koolshare.cn/thread-129199-1-1.html" target="_blank"><i>EasyExplorer文件同步使用教程</i></a>&nbsp;&nbsp;<a href="https://github.com/koolshare/rogsoft/blob/master/easyexplorer/Changelog.txt" target="_blank"><em><u>[ 插件更新日志 ]</u></em></a></li>
+                                            <li><i>使用教程：</i><a href="http://koolshare.cn/thread-129199-1-1.html" target="_blank"><i>EasyExplorer文件同步使用教程</i></a>&nbsp;&nbsp;<a href="https://github.com/koolshare/qcasoft/blob/master/easyexplorer/Changelog.txt" target="_blank"><em><u>[ 插件更新日志 ]</u></em></a></li>
                                             <li><i>注意事项：</i>请保护好你的ddnsto或EasyExplorer的Token，如果被其他人获知，那么下一个摄影大师可能就是你！！！</li>
                                         </div>
                                         <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">

@@ -1923,7 +1923,7 @@
 														<li>额外tracker设置，如果有多个tracker，可以用英文逗号隔开，或者每行一个，或者各一行一个均可！</li>
 														<li>如果你是非公网ip用户，可以开启远程穿透连接，插件将会自动为你设置为通过ddnsto插件穿透！</li>
 														<li>感谢<a href="https://github.com/aria2/aria2" target="_blank" ><i><u>aria2开源项目</u></i></a>，更多帮助信息，请在<a href="https://aria2.github.io/" target="_blank" ><i><u>aria2官方网站</u></i></a>了解。</li>
-														<li>本插件的维护地址在<a href="https://github.com/koolshare/rogsoft" target="_blank" ><i><u>https://github.com/koolshare/rogsoft</u></i></a>，欢迎到此反馈问题！</li>
+														<li>本插件的维护地址在<a href="https://github.com/koolshare/qcasoft" target="_blank" ><i><u>https://github.com/koolshare/qcasoft</u></i></a>，欢迎到此反馈问题！</li>
 													</ul>
 												</td>
 												</tr>

@@ -216,7 +216,7 @@ function showSSLoadingBar(seconds) {
 
 function version_show() {
 	$.ajax({
-		url: 'https://rogsoft.ngrok.wang/ddnsto/config.json.js',
+		url: 'https://qcasoft.ngrok.wang/ddnsto/config.json.js',
 		type: 'GET',
 		dataType: 'jsonp',
 		success: function(res) {

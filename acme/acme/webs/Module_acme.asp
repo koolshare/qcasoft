@@ -428,7 +428,7 @@ function show_log(){
 											<div style="margin:30px 0 10px 5px;" class="splitLine"></div>
 											<div class="SimpleNote">
 												<li>Let's Encrypt是2015年三季度成立的数字证书认证机构，旨在推广互联网无所不在的加密连接，为安全网站提供免费的SSL/TLS证书。
-												<li>本插件使用acme.sh，通过dns_api申请ssl证书，目前支持aliyun、Dnspod、CloudXNS、CloudFlare、Godaddy。 <a type="button" style="cursor:pointer" href="https://github.com/koolshare/rogsoft/blob/master/acme/Changelog.txt" target="_blank"><em>【<u>插件更新日志</u>】</em></a></li>
+												<li>本插件使用acme.sh，通过dns_api申请ssl证书，目前支持aliyun、Dnspod、CloudXNS、CloudFlare、Godaddy。 <a type="button" style="cursor:pointer" href="https://github.com/koolshare/qcasoft/blob/master/acme/Changelog.txt" target="_blank"><em>【<u>插件更新日志</u>】</em></a></li>
 											</div>
 											<table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 												<thead>
