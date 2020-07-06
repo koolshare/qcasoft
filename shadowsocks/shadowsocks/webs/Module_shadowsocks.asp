@@ -2035,7 +2035,9 @@ function version_show() {
 	if(!db_ss["ss_basic_version_local"]) db_ss["ss_basic_version_local"] = "0.0.0"
 	$("#ss_version_show").html("<a class='hintstyle' href='javascript:void(12);' onclick='openssHint(12)'><i>当前版本：" + db_ss['ss_basic_version_local'] + "</i></a>");
 	$.ajax({
-		url: 'https://raw.githubusercontent.com/hq450/fancyss/master/fancyss_hnd/config.json.js',
+		// fancyss repo
+		//url: 'https://raw.githubusercontent.com/hq450/fancyss/master/fancyss_qca/config.json.js',
+		url: 'https://qcasoft.ddnsto.com/shadowsocks/config.json.js',
 		type: 'GET',
 		dataType: 'json',
 		success: function(res) {
@@ -2153,7 +2155,9 @@ function toggle_func() {
 		});
 	$("#update_log").click(
 		function() {
-			window.open("https://github.com/hq450/fancyss/blob/master/fancyss_hnd/Changelog.txt");
+			// one day, you are going to fancyss project
+			//window.open("https://github.com/hq450/fancyss/blob/master/fancyss_qca/Changelog.txt");
+			window.open("https://qcasoft.ddnsto.com/shadowsocks/Changelog.txt");
 		});
 	$("#log_content2").click(
 		function() {
@@ -2992,7 +2996,9 @@ function save_failover() {
 															</a>
 														</div>
 														<div style="display:table-cell;float: left;margin-left:270px;position: absolute;padding: 5.5px 0px;">
-															<a type="button" class="ss_btn" target="_blank" href="https://github.com/hq450/fancyss/blob/master/fancyss_hnd/Changelog.txt">更新日志</a>
+															<!-- one day, you are going to fancyss project -->
+															<!--<a type="button" class="ss_btn" target="_blank" href="https://github.com/hq450/fancyss/blob/master/fancyss_qca/Changelog.txt">更新日志</a>-->
+															<a type="button" class="ss_btn" target="_blank" href="https://qcasoft.ddnsto.com/shadowsocks/Changelog.txt">更新日志</a>
 														</div>
 														<div style="display:table-cell;float: left;margin-left:350px;position: absolute;padding: 5.5px 0px;">
 															<a type="button" class="ss_btn" href="javascript:void(0);" onclick="pop_help()">插件帮助</a>
