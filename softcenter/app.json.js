@@ -199,6 +199,17 @@
             "version": "1.4"
         }, 
         {
+            "build_date": "2020-07-06_21:21:38", 
+            "changelog": "", 
+            "description": "科学上网", 
+            "home_url": "Module_shadowsocks.asp", 
+            "md5": "97c4dd5bc3d1de4aa021831d5f458337", 
+            "name": "shadowsocks", 
+            "tar_url": "shadowsocks/shadowsocks.tar.gz", 
+            "title": "科学上网", 
+            "version": "1.0.0"
+        }, 
+        {
             "build_date": "2020-07-05_10:44:04", 
             "changelog": "", 
             "description": "超强的SSH网页客户端~", 
