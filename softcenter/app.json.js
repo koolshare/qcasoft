@@ -199,15 +199,15 @@
             "version": "1.4"
         }, 
         {
-            "build_date": "2020-07-06_21:37:22", 
+            "build_date": "2020-07-06_21:51:40", 
             "changelog": "", 
             "description": "科学上网", 
             "home_url": "Module_shadowsocks.asp", 
-            "md5": "01639291de0110fd00fb3a84c5ed03ae", 
+            "md5": "2a41f199373d930db7d58e7a019780bb", 
             "name": "shadowsocks", 
             "tar_url": "shadowsocks/shadowsocks.tar.gz", 
             "title": "科学上网", 
-            "version": "1.0.0"
+            "version": "1.0.1"
         }, 
         {
             "build_date": "2020-07-05_10:44:04", 
