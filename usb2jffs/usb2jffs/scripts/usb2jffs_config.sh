@@ -46,7 +46,7 @@ get_current_usb_device(){
 
 get_jffs_original_mount_device(){
 	# 查看原始JFFS分区是用FLASH里的哪个分区挂载的
-	local mtd_jffs=$(df -h | grep -E "/jffs|cifs2" | awk '{print $1}' | grep "/dev/mtd")
+	local mtd_jffs=$(df -h | grep -E "/jffs|cifs2" | awk '{print $1}' | grep "/dev/ubi")
 	if [ -n "$mtd_jffs" ];then
 		# 没有载了USB jffs的时候，可以获取到
 		mtd_disk="$mtd_jffs"
@@ -56,16 +56,8 @@ get_jffs_original_mount_device(){
 		# 防止意外
 		local model=$(nvram get productid)
 		case $model in
-			RT-AC86U|GT-AC5300)
-				mtd_disk="/dev/mtdblock8"
-				return 0
-				;;
-			RT-AX88U|GT-AX11000|TUF-AX3000)
-				mtd_disk="/dev/mtdblock9"
-				return 0
-				;;
-			RT-AC5300)
-				mtd_disk="/dev/mtdblock4"
+			RT-AX89U)
+				mtd_disk="/dev/ubi0_5"
 				return 0
 				;;
 			*)
@@ -149,19 +141,6 @@ speed_test(){
 }
 
 start_usb2jffs(){
-	# 判断软件中心版本
-	if [ -f "/koolshare/.soft_ver" ];then
-		local CUR_VERSION=$(cat /koolshare/.soft_ver)
-	else
-		local CUR_VERSION="0"
-	fi
-	NEED_VERSION="1.5.4"
-	COMP=$(/rom/etc/koolshare/bin/versioncmp $CUR_VERSION $NEED_VERSION )
-	if [ "$COMP" == "1" ]; then
-		echo_date "软件中心版本：$CUR_VERSION，版本号过低，不支持本插件，请将软件中心更新到最新后重试！" 
-		return 1
-	fi
-	
 	if [ -z "${KSPATH}" ]; then
 		echo_date "发生错误，无法获取到USB分区名！请重启路由器后重试！"
 	fi
@@ -213,7 +192,7 @@ start_usb2jffs(){
 	
 		# 把原来的jffs分区挂载到cifs2
 		echo_date "将$mtd_disk挂载在/cifs2"
-		mount -t jffs2 -o rw,noatime $mtd_disk /cifs2
+		mount -t ubifs -o rw,noatime $mtd_disk /cifs2
 		if [ "$?" == "0" ]; then
 			echo_date "/cifs2挂载成功！"
 		else
@@ -225,7 +204,7 @@ start_usb2jffs(){
 	else
 		echo_date "USB型JFFS挂载失败！！"
 		echo_date "尝试恢复原始挂载方式！"
-		mount -t jffs2 -o rw,noatime $mtd_disk /jffs
+		mount -t ubifs -o rw,noatime $mtd_disk /jffs
 		if [ "$?" == "0" ]; then
 			echo_date "已经恢复到原始挂载方式！"
 			echo_date "重启软件中心！！"
@@ -279,7 +258,7 @@ stop_usb2jffs(){
 	if [ "$?" == "0" ]; then
 		echo_date "/jffs卸载成功..."
 		echo_date "将文件系统$mtd_disk挂载到jffs分区..."
-		mount -t jffs2 -o rw,noatime $mtd_disk /jffs
+		mount -t ubifs -o rw,noatime $mtd_disk /jffs
 		if [ "$?" == "0" ]; then
 			echo_date "$mtd_disk → /jffs挂载成功！"
 			echo_date "重启软件中心相关进程..."

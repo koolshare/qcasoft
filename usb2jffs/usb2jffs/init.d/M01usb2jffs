@@ -48,20 +48,16 @@ get_current_usb_device(){
 
 get_jffs_original_mount_device(){
 	# 查看原始JFFS分区是用FLASH里的哪个分区挂载的
-	local mtd_jffs=$(df -h | grep -E "/jffs|cifs2" | awk '{print $1}' | grep "/dev/mtd")
+	local mtd_jffs=$(df -h | grep -E "/jffs|cifs2" | awk '{print $1}' | grep "/dev/ubi")
 	if [ -n "$mtd_jffs" ];then
 		mtd_disk="$mtd_jffs"
 		return 0
 	else
-		# incase of cifs2 not mounted
-		local model=$(nvram get model)
+		# 防止意外
+		local model=$(nvram get productid)
 		case $model in
-			RT-AC86U|GT-AC5300)
-				mtd_disk="/dev/mtdblock8"
-				return 0
-				;;
-			RT-AX88U|GT-AX11000)
-				mtd_disk="/dev/mtdblock9"
+			RT-AX89U)
+				mtd_disk="/dev/ubi0_5"
 				return 0
 				;;
 			*)

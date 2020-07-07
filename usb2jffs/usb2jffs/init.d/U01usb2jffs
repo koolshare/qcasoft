@@ -75,15 +75,11 @@ get_jffs_original_mount_device(){
 		mtd_disk="$mtd_jffs"
 		return 0
 	else
-		# incase of cifs2 not mounted
-		local model=$(nvram get model)
+		# 防止意外
+		local model=$(nvram get productid)
 		case $model in
-			RT-AC86U|GT-AC5300)
-				mtd_disk="/dev/mtdblock8"
-				return 0
-				;;
-			RT-AX88U|GT-AX11000)
-				mtd_disk="/dev/mtdblock9"
+			RT-AX89U)
+				mtd_disk="/dev/ubi0_5"
 				return 0
 				;;
 			*)
@@ -106,7 +102,7 @@ start(){
 	
 		umount -l /jffs >/dev/null 2>&1
 		if [ "$?" == "0" ]; then
-			mount -t jffs2 -o rw,noatime $mtd_disk /jffs
+			mount -t ubifs -o rw,noatime $mtd_disk /jffs
 			if [ "$?" == "0" ]; then
 				service start_skipd
 				/koolshare/perp/perp.sh start
