@@ -6,7 +6,7 @@
 
 | 机型/固件下载                                             | 类型 | CPU/SOC | 平台        | 架构  | 内核   | 皮肤        |
 | --------------------------------------------------------- | ---- | ------- | ----------- | ----- | ------ | ----------- |
-| RT-AC89X                                                  | 官改 | IPQ8076 | qca-ipq806x | ARMV7 | 4.4.60 | asuswrt     |
+| RT-AC89X                                                  | 官改 | IPQ8078 | qca-ipq806x | ARMV7 | 4.4.60 | asuswrt     |
 
 ## 用户须知
 
@@ -31,7 +31,7 @@
 |  适用架构   |                            armv7l                            |                            armv7l                            |                         armv7l/armv8                         | armv7l                                          |                        x64                        |
 |    平台     |                         4708/7/7114                          |                         4708/7/7114                          |                     hnd/axhnd/axhnd.675x                     | qca-ipq806x                                     |                     by fw867                      |
 |  linux内核  |                           2.6.36.4                           |                           2.6.36.4                           |                            4.1.xx                            | 4.4.60                                          |                       很新                        |
-|     CPU     |                          bcm4708/9                           |                          bcm4708/9                           |                       bcm490x/bcm67xx                        | IPQ8074                                         |                     intel/AMD                     |
+|     CPU     |                          bcm4708/9                           |                          bcm4708/9                           |                       bcm490x/bcm67xx                        | IPQ8078                                         |                     intel/AMD                     |
 |  固件版本   |                    koolshare 梅林**380**                     |                    koolshare 梅林**384**                     |                     koolshare 梅林/官改                      | 官改                                            |                   OpenWRT/LEDE                    |
 | 软件中心api |                          **1.0** 代                          |                          **1.5** 代                          |                          **1.5** 代                          | **1.5** 代                                      |                    **1.5** 代                     |
 | 代表机型-1  | [RT-AC68U 改版梅林380](https://koolshare.cn/thread-139322-1-1.html) | [RT-AC88U 改版梅林384](https://koolshare.cn/thread-164857-1-1.html) | [RT-AC86U 改版梅林](https://koolshare.cn/thread-127878-1-1.html) | RT-AX89X                                        |                         \                         |
