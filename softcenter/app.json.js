@@ -221,17 +221,6 @@
             "version": "1.5"
         }, 
         {
-            "build_date": "2020-09-23_22:10:55", 
-            "changelog": "", 
-            "description": "上海电信IPTV，4K IPTV 一键开启", 
-            "home_url": "Module_shiptv.asp", 
-            "md5": "0a7ba2881a167d38ea8b261b45e4a3b7", 
-            "name": "shiptv", 
-            "tar_url": "shiptv/shiptv.tar.gz", 
-            "title": "上海电信IPTV", 
-            "version": "1.1"
-        }, 
-        {
             "build_date": "2020-09-23_22:10:56", 
             "changelog": "", 
             "description": "VPN全家桶, ver 4.29 build 9680", 
@@ -263,21 +252,10 @@
             "tar_url": "usb2jffs/usb2jffs.tar.gz", 
             "title": "USB2JFFS", 
             "version": "1.7"
-        }, 
-        {
-            "build_date": "2020-09-23_22:10:56", 
-            "changelog": "", 
-            "description": "wifi boost 路由器功率增强，强过澳大利亚", 
-            "home_url": "Module_wifiboost.asp", 
-            "md5": "9241ef81463ec5ac6fc79acb8b2e09f7", 
-            "name": "wifiboost", 
-            "tar_url": "wifiboost/wifiboost.tar.gz", 
-            "title": "wifi boost", 
-            "version": "1.5"
         }
     ], 
     "home_url": "https://raw.githubusercontent.com/koolshare/koolshare.github.io/master", 
-    "md5": "f294d74693f1b030694efa97bee446ad", 
+    "md5": "91fc251fc8c9af159f5260615a829c8a", 
     "tar_url": "softcenter/softcenter.tar.gz", 
     "version": "1.0.5"
 }
