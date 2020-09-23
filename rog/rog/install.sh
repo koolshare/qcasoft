@@ -4,8 +4,6 @@ alias echo_date='echo 【$(TZ=UTC-8 date -R +%Y年%m月%d日\ %X)】:'
 DIR=$(cd $(dirname $0); pwd)
 MODEL=$(nvram get productid)
 module=rog
-odmpid=$(nvram get odmpid)
-LINUX_VER=$(cat /proc/version|awk '{print $3}'|awk -F"." '{print $1$2}')
 
 # 获取固件类型
 _get_type() {
@@ -25,6 +23,7 @@ _get_type() {
 	fi
 }
 
+# 退出安装
 exit_install(){
 	local state=$1
 	case $state in
@@ -57,16 +56,9 @@ case $(uname -m) in
 esac
 
 # 安装插件
-if [ ! -x /koolshare/bin/jq ]; then
-	cp -f /tmp/rog/bin/jq /koolshare/bin/
-	chmod +x /koolshare/bin/jq
-fi
 cp -rf /tmp/rog/scripts/* /koolshare/scripts/
 cp -rf /tmp/rog/webs/* /koolshare/webs/
 cp -rf /tmp/rog/res/* /koolshare/res/
-if [ -n "$odmpid" -a "$odmpid" == "RAX80" ];then
-	cp -rf /tmp/rog/init.d/* /koolshare/init.d/
-fi
 chmod +x /koolshare/scripts/rog*
 chmod +x /koolshare/scripts/uninstall_rog.sh
 
