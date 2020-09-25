@@ -56,6 +56,21 @@ install_tar(){
 		if [ -n "$INSTALL_SCRIPT" -a -f "$INSTALL_SCRIPT" ];then
 			SCRIPT_AB_DIR=$(dirname $INSTALL_SCRIPT)
 			MODULE_NAME=${SCRIPT_AB_DIR##*/}
+
+			# 检查下安装包是否是qca的
+			if [ -f "${SCRIPT_AB_DIR}/.valid" ] && [ "$(cat ${SCRIPT_AB_DIR}/.valid)" == "qca" ];then
+				continue
+			else
+				echo_date 你上传的离线安装包不是qca-ipq806x平台的离线包！！！
+				echo_date 请上传正确的离线安装包！！！
+				echo_date 删除相关文件并退出...
+				clean
+				dbus remove "softcenter_module_$MODULE_NAME$INSTALL_SUFFIX"
+				echo_date ======================== end ============================
+				echo XU6J03M6
+				exit		
+			fi
+
 			echo_date 准备安装${MODULE_NAME}插件！
 			echo_date 找到安装脚本！
 			chmod +x $INSTALL_SCRIPT >/dev/null 2>&1
