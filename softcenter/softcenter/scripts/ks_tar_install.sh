@@ -68,7 +68,7 @@ install_tar(){
 				dbus remove "softcenter_module_$MODULE_NAME$INSTALL_SUFFIX"
 				echo_date ======================== end ============================
 				echo XU6J03M6
-				exit		
+				exit
 			fi
 
 			echo_date 准备安装${MODULE_NAME}插件！
