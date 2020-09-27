@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# shadowsocks script for HND/AXHND router with kernel 4.1.27/4.1.51 merlin firmware
+# shadowsocks script for qca-ipq806x platform router
 
 source /koolshare/scripts/ss_base.sh
 
@@ -82,13 +82,13 @@ echo_version() {
 	echo "ssrr-redir		3.5.3			2018年12月06日编译"
 	echo "ssrr-local		3.5.3			2018年12月06日编译"
 	echo "haproxy			2.1.2			2020年01月06日编译"
-	echo "dns2socks		V2.0			2017年12月05日编译"
+	echo "dns2socks		V2.0			2020年09月27日编译"
 	echo "cdns			1.0			2017年12月09日编译"
 	echo "chinadns1		1.3.2			2017年12月09日编译"
 	echo "chinadns2		2.0.0			2017年12月09日编译"
-	echo "chinadns-ng		v1.0-beta.22		2020年06月02日编译"
-	echo "https_dns_proxy		758f913			2019年02月05日编译"
-	echo "httping			2.6			2020年01月06日编译"
+	echo "chinadns-ng		v1.0-beta.22		2020年09月27日编译"
+	echo "https_dns_proxy		2adeafb			2020年09月27日编译"
+	echo "httping			2.6			2020年09月27日编译"
 	echo "v2ray			$ss_basic_v2ray_version			2020年06月02日编译"
 	echo "v2ray-plugin		v1.3.1			Official Release 2020年06月01日"
 	echo "SmartDNS		1.2020.05.04-0005	Official Release 2020年05月04日"

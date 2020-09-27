@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# shadowsocks script for HND/AXHND router with kernel 4.1.27/4.1.51 merlin firmware
+# shadowsocks script for qca-ipq806x platform router
 
 sh /koolshare/ss/ssconfig.sh stop
 sh /koolshare/scripts/ss_conf.sh koolshare 3

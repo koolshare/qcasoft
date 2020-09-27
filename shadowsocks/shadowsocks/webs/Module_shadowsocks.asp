@@ -61,6 +61,7 @@ var option_v2enc = [["none", "不加密"], ["auto", "自动"], ["aes-128-cfb", "
 var option_headtcp = [["none", "不伪装"], ["http", "伪装http"]];
 var option_headkcp = [["none", "不伪装"], ["srtp", "伪装视频通话(srtp)"], ["utp", "伪装BT下载(uTP)"], ["wechat-video", "伪装微信视频通话"]];
 var heart_count = 1;
+var MODEL = '<% nvram_get("odmpid"); %>' || '<% nvram_get("productid"); %>';
 const pattern=/[`~!@#$^&*()=|{}':;'\\\[\]\.<>\/?~！@#￥……&*（）——|{}%【】'；：""'。，、？\s]/g;
 
 
@@ -1947,7 +1948,7 @@ function download_SS_node(arg) {
 				}else if(arg == 2){
 					var b = document.createElement('A')
 					b.href = "_root/files/shadowsocks.tar.gz"
-					b.download = 'shadowsocks_' + productid + '.tar.gz'
+					b.download = 'shadowsocks_' + MODEL + '.tar.gz'
 					document.body.appendChild(b);
 					b.click();
 					document.body.removeChild(b);
@@ -2913,7 +2914,11 @@ function save_failover() {
 								<tr>
 									<td bgcolor="#4D595D" colspan="3" valign="top">
 										<div>&nbsp;</div>
-										<div class="formfonttitle"><% nvram_get("productid"); %> 科学上网插件</div>
+										<div id="title_name" class="formfonttitle"><% nvram_get("productid"); %> 科学上网插件</div>
+										<script type="text/javascript">
+											var MODEL = '<% nvram_get("odmpid"); %>' || '<% nvram_get("productid"); %>';
+											$("#title_name").html(MODEL + " 科学上网插件")
+										</script>
 										<div style="float:right; width:15px; height:25px;margin-top:-20px">
 											<img id="return_btn" onclick="reload_Soft_Center();" align="right" style="cursor:pointer;position:absolute;margin-left:-30px;margin-top:-25px;" title="返回软件中心" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'"></img>
 										</div>
