@@ -58,7 +58,7 @@ install_tar(){
 			MODULE_NAME=${SCRIPT_AB_DIR##*/}
 
 			# 检查下安装包是否是qca的
-			if [ -f "${SCRIPT_AB_DIR}/.valid" ] && [ "$(cat ${SCRIPT_AB_DIR}/.valid)" == "qca" ];then
+			if [ -f "${SCRIPT_AB_DIR}/.valid" ] && -n [ "$(grep qca ${SCRIPT_AB_DIR}/.valid)" ];then
 				continue
 			else
 				echo_date 你上传的离线安装包不是qca-ipq806x平台的离线包！！！
