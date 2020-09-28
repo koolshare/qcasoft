@@ -31,7 +31,7 @@ def work_paths_by_walk():
             print os.path.join(root,sub)
 
 def work_parent():
-    ignore_paths = frozenset(["softcenter", "routerhook", "pushplus", "serverchan", "mdial", "ssserver", "swap", "usb2jffs"])
+    ignore_paths = frozenset(["softcenter", "routerhook", "pushplus", "serverchan", "mdial", "ssserver", "usb2jffs"])
     fnames = os.listdir(parent_path)
     fnames.sort()
     for fname in fnames:
