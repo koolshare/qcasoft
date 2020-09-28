@@ -124,28 +124,6 @@
         {
             "build_date": "2020-09-25_11:29:00", 
             "changelog": "", 
-            "description": "pppoe单线多拨，带宽提升神器！", 
-            "home_url": "Module_mdial.asp", 
-            "md5": "87cadd6e886201d07ea405b7df4ad441", 
-            "name": "mdial", 
-            "tar_url": "mdial/mdial.tar.gz", 
-            "title": "单线多拨", 
-            "version": "1.3"
-        }, 
-        {
-            "build_date": "2020-09-25_11:29:00", 
-            "changelog": "", 
-            "description": "通过pushplus将路由器状态推送到微信上", 
-            "home_url": "Module_pushplus.asp", 
-            "md5": "d248ca5ee78da1a5cd6462e65301158a", 
-            "name": "pushplus", 
-            "tar_url": "pushplus/pushplus.tar.gz", 
-            "title": "pushplus全能推送", 
-            "version": "0.3"
-        }, 
-        {
-            "build_date": "2020-09-25_11:29:00", 
-            "changelog": "", 
             "description": "自动签到", 
             "home_url": "Module_qiandao.asp", 
             "md5": "34feb340f71026cd5582adb1dbde3853", 
@@ -157,17 +135,6 @@
         {
             "build_date": "2020-09-25_11:29:00", 
             "changelog": "", 
-            "description": "解决重启Bug", 
-            "home_url": "Module_reboothelper.asp", 
-            "md5": "fd4d7d5c535473e8803c8a95bdb3e7f8", 
-            "name": "reboothelper", 
-            "tar_url": "reboothelper/reboothelper.tar.gz", 
-            "title": "重启助手", 
-            "version": "0.6"
-        }, 
-        {
-            "build_date": "2020-09-25_11:29:00", 
-            "changelog": "", 
             "description": "一些小功能的插件", 
             "home_url": "Module_rog.asp", 
             "md5": "ae390ccaf90d963d867d321e2bf7ef33", 
@@ -175,39 +142,6 @@
             "tar_url": "rog/rog.tar.gz", 
             "title": "ROG工具箱", 
             "version": "3.5"
-        }, 
-        {
-            "build_date": "2020-09-25_11:29:01", 
-            "changelog": "", 
-            "description": "从路由器推送状态及通知的工具", 
-            "home_url": "Module_routerhook.asp", 
-            "md5": "6ab0d30041e7492511a7271689d400f1", 
-            "name": "routerhook", 
-            "tar_url": "routerhook/routerhook.tar.gz", 
-            "title": "RouterHook事件回调", 
-            "version": "1.2"
-        }, 
-        {
-            "build_date": "2020-09-25_11:29:01", 
-            "changelog": "", 
-            "description": "从路由器推送状态及通知的工具", 
-            "home_url": "Module_serverchan.asp", 
-            "md5": "f34f7ea426342bde4364e4a3e59a75a5", 
-            "name": "serverchan", 
-            "tar_url": "serverchan/serverchan.tar.gz", 
-            "title": "serverChan微信推送", 
-            "version": "1.4"
-        }, 
-        {
-            "build_date": "2020-09-27_23:03:39", 
-            "changelog": "", 
-            "description": "科学上网", 
-            "home_url": "Module_shadowsocks.asp", 
-            "md5": "661a1c41a8a353de237fc4c2aca383ca", 
-            "name": "shadowsocks", 
-            "tar_url": "shadowsocks/shadowsocks.tar.gz", 
-            "title": "科学上网", 
-            "version": "2.0.1"
         }, 
         {
             "build_date": "2020-09-25_11:29:02", 
@@ -230,32 +164,10 @@
             "tar_url": "softether/softether.tar.gz", 
             "title": "SoftEther_VPN_Server", 
             "version": "1.9"
-        }, 
-        {
-            "build_date": "2020-09-25_11:29:02", 
-            "changelog": "", 
-            "description": "让路由器运行更稳定~", 
-            "home_url": "Module_swap.asp", 
-            "md5": "1685d7b11c5cca5de1d26c296c512ee8", 
-            "name": "swap", 
-            "tar_url": "swap/swap.tar.gz", 
-            "title": "虚拟内存", 
-            "version": "2.0"
-        }, 
-        {
-            "build_date": "2020-09-25_11:29:02", 
-            "changelog": "", 
-            "description": "轻松用U盘挂载jffs", 
-            "home_url": "Module_usb2jffs.asp", 
-            "md5": "a817e44912639850bf049545467c4499", 
-            "name": "usb2jffs", 
-            "tar_url": "usb2jffs/usb2jffs.tar.gz", 
-            "title": "USB2JFFS", 
-            "version": "1.7"
         }
     ], 
     "home_url": "https://raw.githubusercontent.com/koolshare/koolshare.github.io/master", 
-    "md5": "e785a1d161d03cce7280129af8110af9", 
+    "md5": "943bf43f09afa23461fea9fd3ef3d37d", 
     "tar_url": "softcenter/softcenter.tar.gz", 
     "version": "1.2.0"
 }
