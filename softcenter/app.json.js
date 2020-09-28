@@ -23,15 +23,15 @@
             "version": "2.1"
         }, 
         {
-            "build_date": "2020-09-25_11:29:00", 
+            "build_date": "2020-09-28_23:25:42", 
             "changelog": "", 
             "description": "linux下载利器", 
             "home_url": "Module_aria2.asp", 
-            "md5": "8c4d031d0d40a92a64dd4c1e743f4fea", 
+            "md5": "e88380d9aa78a759b7e56690c97f95f8", 
             "name": "aria2", 
             "tar_url": "aria2/aria2.tar.gz", 
             "title": "aria2", 
-            "version": "2.2"
+            "version": "2.3"
         }, 
         {
             "build_date": "2020-09-25_11:29:00", 

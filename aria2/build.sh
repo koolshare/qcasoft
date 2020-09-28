@@ -1,7 +1,7 @@
 #!/bin/sh
 
 MODULE="aria2"
-VERSION="2.2"
+VERSION="2.3"
 TITLE="aria2"
 DESCRIPTION="linux下载利器"
 HOME_URL="Module_aria2.asp"
