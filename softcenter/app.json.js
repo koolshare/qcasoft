@@ -164,6 +164,17 @@
             "tar_url": "softether/softether.tar.gz", 
             "title": "SoftEther_VPN_Server", 
             "version": "1.9"
+        }, 
+        {
+            "build_date": "2020-09-29_00:46:22", 
+            "changelog": "", 
+            "description": "让路由器运行更稳定~", 
+            "home_url": "Module_swap.asp", 
+            "md5": "955a2ba890a2583e74a10f4dcb3955db", 
+            "name": "swap", 
+            "tar_url": "swap/swap.tar.gz", 
+            "title": "虚拟内存", 
+            "version": "2.1"
         }
     ], 
     "home_url": "https://raw.githubusercontent.com/koolshare/koolshare.github.io/master", 
