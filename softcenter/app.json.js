@@ -100,15 +100,15 @@
             "version": "1.6"
         }, 
         {
-            "build_date": "2020-09-25_11:29:00", 
+            "build_date": "2020-09-28_20:26:09", 
             "changelog": "", 
             "description": "kms", 
             "home_url": "Module_kms.asp", 
-            "md5": "13c4f3180fe871949ce152dbb439ebbf", 
+            "md5": "f3055780f782725438d2986cb87f7633", 
             "name": "kms", 
             "tar_url": "kms/kms.tar.gz", 
             "title": "系统工具", 
-            "version": "1.5"
+            "version": "1.6"
         }, 
         {
             "build_date": "2020-09-25_11:29:00", 
