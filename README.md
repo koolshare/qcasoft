@@ -18,8 +18,8 @@
 如果你是开发者，想要为qcasoft开发新的插件，并用离线包的方式进行传播，请了解qcasoft是基于koolshare 1.5代软件中心api开发，其和前代梅林380软件中心不同，并且不兼容（因为web api）！：
 
 1. 在web方面：此版软件中心在web上使用的是软件中心1.5代的api，与[ledesoft](https://github.com/koolshare/ledesoft)、[armsoft](https://github.com/koolshare/armsoft)和[rogsoft](https://github.com/koolshare/rogsoft)一致
-2. 在程序方面：qcasoft目前支持的机型：`RT-AX89`CPU虽然为`armv8`架构，但是固件的linux内核为32位的，所以RT-AX89X固件后台显示`armv7l`，所以RT-AX89X仅支持32位程序。为了兼容以后可能出现的华硕高通机型，建议全部采用32位程序
-3. 程序编译建议使用`RT-AX89`源码包中提供的工具链：openwrt-gcc463.arm，并且为了保证在不同固件之间的正常运行，尽量使用全静态编译。
+2. 在程序方面：qcasoft目前支持的机型：`RT-AX89X`CPU虽然为`armv8`架构，但是固件的linux内核为32位的，所以RT-AX89X固件后台显示`armv7l`，所以RT-AX89X仅支持32位程序。为了兼容以后可能出现的华硕高通机型，建议全部采用32位程序
+3. 程序编译建议使用`RT-AX89X`源码包中提供的工具链：openwrt-gcc463.arm，并且为了保证在不同固件之间的正常运行，尽量使用全静态编译。
 6. 为了避免用户使用其它平台的离线安装包进行安装，因此，rogsoft软件中心需要对离线安装包需要做验证。安装时需要验证安装包内是否含有`.valid`文件，且文件内含有`qca`字符串。
 7. 为了避免用户讲本项目内的离线安装包用于其它不兼容的软件中心平台，为了避免用户讲本项目内的离线安装包用于其它不兼容的软件中心平台，因此本项目中所有的安装包内的`install.sh`都需要进对安装的固件/平台进行检测，可以参考[示例](https://github.com/koolshare/qcasoft/blob/master/rog/rog/install.sh#L44-L56)。
 
