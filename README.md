@@ -11,7 +11,7 @@
 ## 用户须知
 
 - 本项目，即`qca软件中心（qcasoft）`与[hnd软件中心（rogsoft）](https://github.com/koolshare/rogsoft)、梅林[arm380](https://github.com/koolshare/koolshare.github.io)/[arm384](https://github.com/koolshare/armsoft)软件中心的插件不兼容！所以不要用离线安装功能安装其它平台的软件中心！！
-- 除非你要安装的插件作者明确表示他的插件可以用于hnd/axhnd平台的软件中心，或者插件来源于rogsoft内本身的插件，才可以安装！！
+- 除非你要安装的插件作者明确表示他的插件可以用于`qca-ipq806x`平台的软件中心，或者插件来源于qcasoft内本身的插件，才可以安装！！
 
 ## 开发须知：
 
