@@ -67,15 +67,15 @@
             "version": "2.0"
         }, 
         {
-            "build_date": "2020-09-25_11:29:00", 
+            "build_date": "2020-10-11_21:51:36", 
             "changelog": "", 
             "description": "易有云 （EasyExplorer） 跨平台文件同步，支持双向同步！", 
             "home_url": "Module_easyexplorer.asp", 
-            "md5": "babc85fc128f249f1b3bc81c997cfddc", 
+            "md5": "fa2dd07070b88cea78f9f5af48fbf837", 
             "name": "easyexplorer", 
             "tar_url": "easyexplorer/easyexplorer.tar.gz", 
             "title": "易有云", 
-            "version": "2.4"
+            "version": "2.4.1"
         }, 
         {
             "build_date": "2020-10-11_21:46:09", 
