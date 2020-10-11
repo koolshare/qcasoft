@@ -1,9 +1,9 @@
 {
 "version":"1.6",
-"md5":"13d75a8180bb6b447bc19d87069f84bb",
+"md5":"f9b5f05a8c09c660c85caf731e75cdb6",
 "home_url":"Module_fastd1ck.asp",
 "title":"迅雷快鸟",
 "description":"迅雷快鸟，上网必备神器",
 "changelog":"",
-"build_date":"2020-09-25_11:29:00"
+"build_date":"2020-10-11_21:46:09"
 }
