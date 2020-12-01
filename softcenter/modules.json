@@ -1,4 +1,5 @@
 [
 {"module": "linkease", "git_source": "https://github.com/koolshare/rogsoft_LinkEase.git"},
-{"module": "filebrowser", "git_source": "https://github.com/flyhigherpi/filebrowser.git"}
+{"module": "filebrowser", "git_source": "https://github.com/flyhigherpi/filebrowser.git"},
+{"module": "signdog", "git_source": "https://github.com/koolshare/signdog_hnd.git"}
 ]
