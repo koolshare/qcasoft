@@ -1,7 +1,7 @@
 #!/bin/sh
 
 MODULE="ddnsto"
-VERSION="2.0"
+VERSION="2.1"
 TITLE="ddnsto"
 DESCRIPTION="ddnsto内网穿透"
 HOME_URL="Module_ddnsto.asp"

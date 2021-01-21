@@ -56,15 +56,15 @@
             "version": "1.5"
         }, 
         {
-            "build_date": "2020-09-25_11:29:00", 
+            "build_date": "2021-01-21_23:46:25", 
             "changelog": "", 
             "description": "ddnsto内网穿透", 
             "home_url": "Module_ddnsto.asp", 
-            "md5": "7724b54463ad598a391dad5bbe31166b", 
+            "md5": "430f2c12dfd17044f8e6f88fdd4cf829", 
             "name": "ddnsto", 
             "tar_url": "ddnsto/ddnsto.tar.gz", 
             "title": "ddnsto", 
-            "version": "2.0"
+            "version": "2.1"
         }, 
         {
             "build_date": "2020-10-11_21:51:36", 
