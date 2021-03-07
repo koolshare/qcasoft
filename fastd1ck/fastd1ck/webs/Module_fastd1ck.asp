@@ -147,6 +147,7 @@ function generate_options(){
 		}
 		$("#fastd1ck_if").val(1);
 	} else {
+		$("#fastd1ck_if").append("<option value='0'>不绑定</option>");
 		$("#fastd1ck_if").append("<option value='1'>wan1</option>");
 		$("#fastd1ck_if").val(1);
 	}

@@ -141,6 +141,10 @@ get_bind_ip(){
 	wans_mode=$(nvram get wans_mode)
 	wan0_addr=$(nvram get wan0_ipaddr)
 	wan1_addr=$(nvram get wan1_ipaddr)
+	if [ "$fastd1ck_if" == "0" ];then
+		_log "不绑定接口..."
+	fi
+	
 	if [ "$fastd1ck_if" == "1" ];then
 		_bind_ip="$wan0_addr"
 	elif [ "$fastd1ck_if" == "2" ];then
@@ -155,13 +159,17 @@ get_bind_ip(){
 	else
 		_log "绑定IP地址: $_bind_ip"
 		return 0
-	fi		
+	fi
 }
 
 # 定义基本 HTTP 命令和参数
 gen_http_cmd() {
 	_http_cmd="wget -q -nv -t 1 -T 5 --no-check-certificate -O - "
-	_http_cmd="$_http_cmd --bind-address=$_bind_ip"
+	if [ "$fastd1ck_if" == "0" ]
+		_http_cmd="$_http_cmd"
+	else
+		_http_cmd="$_http_cmd --bind-address=$_bind_ip"
+	fi
 }
 
 # 300
