@@ -97,7 +97,7 @@ json_select(){
 }
 # 日志和状态栏输出。1 日志文件, 2 系统日志, 4 详细模式, 8 下行状态栏, 16 上行状态栏, 32 失败状态
 _log() {
-	local msg=$1 flag=$2 timestamp=$(date +'%Y/%m/%d %H:%M:%S')
+	local msg=$1 flag=$2 timestamp="【$(TZ=UTC-8 date -R +%Y年%m月%d日\ %X)】:"
 	[ -z "$msg" ] && return
 	[ -z "$flag" ] && flag=1
 
@@ -143,6 +143,7 @@ get_bind_ip(){
 	wan1_addr=$(nvram get wan1_ipaddr)
 	if [ "$fastd1ck_if" == "0" ];then
 		_log "不绑定接口..."
+		return 0
 	fi
 	
 	if [ "$fastd1ck_if" == "1" ];then
@@ -165,7 +166,7 @@ get_bind_ip(){
 # 定义基本 HTTP 命令和参数
 gen_http_cmd() {
 	_http_cmd="wget -q -nv -t 1 -T 5 --no-check-certificate -O - "
-	if [ "$fastd1ck_if" == "0" ]
+	if [ "$fastd1ck_if" == "0" ];then
 		_http_cmd="$_http_cmd"
 	else
 		_http_cmd="$_http_cmd --bind-address=$_bind_ip"
@@ -534,7 +535,7 @@ isp_upgrade() {
 			local outmsg="${link_cn}提速失败。错误代码: ${lasterr}"; \
 				[ -n "$message" ] && outmsg="${outmsg}，原因: $message"; _log "$outmsg" $(( 1 | $1 * 8 | 32 ));;
 	esac
-	_log "XU6J03M7--------------------------------------------------------------------------"
+	_log "XU6J03M7------------------------------------------------------------------"
 	[ $lasterr -eq 0 ] && return 0 || return 1
 }
 
@@ -662,7 +663,7 @@ sigterm() {
 	dbus remove fastd1ck_status_tx
 	_log "停止插件！"
 	dbus set fastd1ck_enable=0
-	_log "XU6J03M6--------------------------------------------------------------------------"
+	_log "XU6J03M6----------------------------------------------------------------------"
 	exit 0
 }
 
@@ -699,7 +700,7 @@ xlnetacc_init() {
 	readonly relogin=$(( $relogin * 60 * 60 ))
 
 	[ $logging -eq 1 ] && [ ! -d /var/log ] && mkdir -p /var/log
-	[ -f "$LOGFILE" ] && _log "--------------------------------------------------------------------------"
+	[ -f "$LOGFILE" ] && _log "----------------------------------------------------------------------"
 	_log "迅雷快鸟正在启动..."
 
 	# 捕获中止信号
@@ -784,5 +785,5 @@ xlnetacc_main() {
 xlnetacc_init "$@" && xlnetacc_main
 _log "停止插件！"
 dbus set fastd1ck_enable=0
-_log "XU6J03M6--------------------------------------------------------------------------"
+_log "XU6J03M6----------------------------------------------------------------------"
 exit $?
