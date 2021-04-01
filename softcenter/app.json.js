@@ -175,6 +175,17 @@
             "tar_url": "swap/swap.tar.gz", 
             "title": "虚拟内存", 
             "version": "2.1"
+        }, 
+        {
+            "build_date": "2021-04-01_17:10:49", 
+            "changelog": "", 
+            "description": "ZeroTier 内网穿透", 
+            "home_url": "Module_zerotier.asp", 
+            "md5": "e91519d7dc17335fc87c95d3fd2ad76f", 
+            "name": "zerotier", 
+            "tar_url": "zerotier/zerotier.tar.gz", 
+            "title": "ZeroTier", 
+            "version": "1.3.2"
         }
     ], 
     "home_url": "https://raw.githubusercontent.com/koolshare/koolshare.github.io/master", 
