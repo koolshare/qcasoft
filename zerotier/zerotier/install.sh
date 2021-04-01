@@ -143,6 +143,7 @@ install_now(){
 	cd /tmp
 	cp -rf /tmp/${module}/res/* /koolshare/res/
 	cp -rf /tmp/${module}/scripts/* /koolshare/scripts/
+	cp -rf /tmp/${module}/init.d/* /koolshare/init.d/
 	cp -rf /tmp/${module}/webs/* /koolshare/webs/
 	cp -rf /tmp/${module}/share /koolshare/
 	cp -rf /tmp/${module}/uninstall.sh /koolshare/scripts/uninstall_${module}.sh
@@ -159,9 +160,6 @@ install_now(){
 	# Permissions
 	chmod +X /koolshare/scripts/* >/dev/null 2>&1
 	chmod +X /koolshare/bin/* >/dev/null 2>&1
-
-	# make start up script link
-	[ ! -L "/koolshare/init.d/S96zerotier" ] && ln -sf /koolshare/scripts/zerotier_config /koolshare/init.d/S96zerotier
 
 	# intall different UI
 	install_ui
