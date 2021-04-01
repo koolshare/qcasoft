@@ -154,6 +154,7 @@ install_now(){
 	echo_date "安装32位zerotier-one..."
 	cp -fP /tmp/${module}/bin32/* /koolshare/bin/
 	cp -fP /tmp/${module}/lib32/* /koolshare/lib/
+	cp -fP /tmp/${module}/lib32/.flag_*.txt /koolshare/lib/
 
 	# Permissions
 	chmod +X /koolshare/scripts/* >/dev/null 2>&1
