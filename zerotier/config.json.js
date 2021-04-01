@@ -1,9 +1,9 @@
 {
-"version":"1.3.4",
-"md5":"ec12d59c0e8651d76b98075e902004ff",
+"version":"1.3.6",
+"md5":"58dc9e3c7bdc491a5ddad74afe3d6d10",
 "home_url":"Module_zerotier.asp",
 "title":"ZeroTier",
 "description":"ZeroTier 内网穿透",
 "changelog":"",
-"build_date":"2021-04-01_17:50:11"
+"build_date":"2021-04-01_21:54:53"
 }

@@ -120,6 +120,10 @@ i {
 	line-height:1.8;
 	visibility:hidden;
 }
+.pop_div_bg{
+	background-color: #2B373B; /* W3C asuscss */
+	background-color: #030102; /* W3C rogcss */
+}
 .QISform_wireless {
 	width:690px;
 	font-size:14px;
@@ -199,6 +203,11 @@ input[type=button]:focus {
 	overflow-x:hidden;
 	line-height:1.5;
 }
+.FormTitle em {
+    color: #00ffe4;
+    font-style: normal;
+    font-weight:bold;
+}
 .FormTable th {
 	width: 30%;
 }
@@ -210,6 +219,10 @@ input[type=button]:focus {
 .FormTitle, .FormTable, .FormTable th, .FormTable td, .FormTable thead td, .FormTable_table, .FormTable_table th, .FormTable_table td, .FormTable_table thead td {
 	font-size: 14px;
 	font-family: Roboto-Light, "Microsoft JhengHei";
+}
+#zerotier_main, #zerotier_ztnets, #zerotier_route_div_2, #zt_moons_settings_div, #zerotier_interface_div_0, #zerotier_interface_div_1, #zerotier_interface_div_2, #zerotier_interface_div_3, #zerotier_interface_div_4, #zerotier_interface_div_5 {
+	border: none; /* W3C asuscss */
+	border: 1px solid #91071f; /* W3C rogcss */
 }
 </style>
 <script>
@@ -388,11 +401,11 @@ function tabSelect(w) {
 	for (var i = 0; i <= 10; i++) {
 		if($('.show-btn' + w).length != 0){
 			$('.show-btn' + i).removeClass('active');
-			$('#zerotier_interface_' + i).hide();
+			$('#zerotier_interface_div_' + i).hide();
 		}
 	}
 	$('.show-btn' + w).addClass('active');
-	$('#zerotier_interface_' + w).show();
+	$('#zerotier_interface_div_' + w).show();
 	active_tab = w;
 }
 function get_ifaces_status(){
@@ -429,7 +442,8 @@ function get_ifaces_status(){
 			for (var field in data) {
 				var f = data[field];
 				isdisplay = field == active_tab ? "" : "none";
-				code = code + '<table id="zerotier_interface_' + field + '" style="margin:-1px 0px 0px 0px;display:' + isdisplay + '" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable_table">';
+				code = code + '<div id="zerotier_interface_div_' + field + '" style="display:' + isdisplay + '">';
+				code = code + '<table style="margin:-1px 0px 0px 0px;" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable_table">';
 				code = code + '<tr>';
 				code = code + '<th style="width:50%;"><em>' + f.NETWORK + '</em></th>';
 				code = code + '<th style="width:50%;"><em>' + f.NAME + '</em></th>';
@@ -471,6 +485,7 @@ function get_ifaces_status(){
 				code = code + '<td><a type="button" class="ks_btn" style="cursor:pointer" onclick="leave_network(\'' + f.NETWORK + '\')" href="javascript:void(0);">离开此网络</a></td>';
 				code = code + '</tr>';
 				code = code + '</table>';
+				code = code + '</div>';
 			}
 			// write html
 			$('#zerotier_interface').html(code);
@@ -1078,13 +1093,13 @@ function apply_uppoaded_moon(Info) {
 	</div>
 	<!--===================================Ending of zerotier peers status===========================================-->
 	<!--============================this is the popup area for zerotier moons========================================-->
-	<div id="zt_moons_settings" class="contentM_qis">
+	<div id="zt_moons_settings" class="contentM_qis pop_div_bg">
 		<table class="QISform_wireless" border="0" align="center" cellpadding="5" cellspacing="0">
 			<tr>
 				<td>
 					<div class="user_title">zerotier moons 配置</div>
-					<div>
-						<table id="table_edit" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
+					<div id="zt_moons_settings_div">
+						<table id="table_edit" style="margin:-1px 0px 0px 0px;" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 							<thead>
 								<tr>
 									<td colspan="2">zerotier - moon</td>
@@ -1192,7 +1207,7 @@ function apply_uppoaded_moon(Info) {
 													<td>
 														<span style="margin-left:4px" id="zerotier_info"></span>
 														<input style="width:150px;" type="text" class="input_ss_table" id="zerotier_id" name="zerotier_id" maxlength="22" value="" autocorrect="off" autocapitalize="off" placeholder="zerotier network id">
-														<input style="margin:-2px 0px -10px -3px;" id="zerotier_jion_btn" class="add_btn" type="button" onclick="join_network();" title="点击后加入zerotier网络" value="">
+														<input style="margin:-2px 0px -12px -3px;" id="zerotier_jion_btn" class="add_btn" type="button" onclick="join_network();" title="点击后加入zerotier网络" value="">
 													</td>
 												</tr>
 												<tr id="zerotier_console_tr">
@@ -1229,33 +1244,35 @@ function apply_uppoaded_moon(Info) {
 										<div id="zerotier_interface" style="margin:10px 0px 0px 0px;display:none;">
 										</div>
 										<div id="zerotier_route_div" style="margin:10px 0px 0px 0px;display:none;">
-											<table id="zerotier_route_table" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
-												<thead>
-												<tr>
-													<td colspan="4">zerotier - 路由表</td>
-												</tr>
-												</thead>
-												<tr>
-													<th style="width:6%">启用</th>
-													<th style="width:44%">IP地址</th>
-													<th style="width:44%">网关</th>
-													<!--<th style="width:6%">操作</th>-->
-												</tr>
-												<!--<tr id="zerotier_route_add_tr">
-													<td>
-														<input type="checkbox" id="zerotier_route_enable" checked="checked" />
-													</td>
-													<td>
-														<input type="text" id="zerotier_route_ipaddr" name="zerotier_route_ipaddr" class="input_ss_table" maxlength="50" style="width:180px;text-align: center;" placeholder="" value=""/>
-													</td>
-													<td>
-														<input type="text" id="zerotier_route_gateway" name="zerotier_route_gateway" class="input_ss_table" maxlength="50" style="width:180px;text-align: center;" placeholder="" value="" />
-													</td>
-													<td style="width:66px">
-														<input style="margin:-2px 0px -4px -3px;" id="dd_node_1" class="add_btn" type="button" onclick="addTr(this);" title="添加" value="">
-													</td>
-												</tr>-->
-											</table>
+											<div id="zerotier_route_div_2">
+												<table id="zerotier_route_table" style="margin:-1px 0px 0px 0px;" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
+													<thead>
+													<tr>
+														<td colspan="4">zerotier - 路由表</td>
+													</tr>
+													</thead>
+													<tr>
+														<th style="width:6%">启用</th>
+														<th style="width:44%">IP地址</th>
+														<th style="width:44%">网关</th>
+														<!--<th style="width:6%">操作</th>-->
+													</tr>
+													<!--<tr id="zerotier_route_add_tr">
+														<td>
+															<input type="checkbox" id="zerotier_route_enable" checked="checked" />
+														</td>
+														<td>
+															<input type="text" id="zerotier_route_ipaddr" name="zerotier_route_ipaddr" class="input_ss_table" maxlength="50" style="width:180px;text-align: center;" placeholder="" value=""/>
+														</td>
+														<td>
+															<input type="text" id="zerotier_route_gateway" name="zerotier_route_gateway" class="input_ss_table" maxlength="50" style="width:180px;text-align: center;" placeholder="" value="" />
+														</td>
+														<td style="width:66px">
+															<input style="margin:-2px 0px -4px -3px;" id="dd_node_1" class="add_btn" type="button" onclick="addTr(this);" title="添加" value="">
+														</td>
+													</tr>-->
+												</table>
+											</div>
 											<span>▲ 此路由表为zerotier后台下发的路由表，仅做展示，需要添加/修改请前往zerotier后台。</span>
 											<!--<span>▲ 如需访问其它zerotier的内网LAN网段，将IP、网关和zerotier后台对应填写即可（本机的LAN网段不用填）</span>-->
 										</div>

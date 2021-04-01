@@ -7,6 +7,7 @@ rm -rf /tmp/zerotier* >/dev/null 2>&1
 rm -rf /koolshare/bin/file >/dev/null 2>&1
 rm -rf /koolshare/bin/zerotier*.png >/dev/null 2>&1
 rm -rf /koolshare/res/icon-zerotier.png >/dev/null 2>&1
+rm -rf /koolshare/res/zt_*.png >/dev/null 2>&1
 rm -rf /koolshare/scripts/zerotier_* >/dev/null 2>&1
 rm -rf /koolshare/webs/Module_zerotier.asp >/dev/null 2>&1
 rm -rf /koolshare/share/misc/magic >/dev/null 2>&1
