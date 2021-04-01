@@ -1148,7 +1148,7 @@ function apply_uppoaded_moon(Info) {
 										<div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 										<div class="SimpleNote">
 											<span>Zerotier是一款开源，跨平台，简单易用的内网穿透工具，轻松帮你实现虚拟局域网的组建。</span>
-											<span><a type="button" href="https://github.com/koolshare/rogsoft/blob/master/zerotier/Changelog.txt" target="_blank" class="ks_btn" style="margin-left:5px;" >更新日志</a></span>
+											<span><a type="button" href="https://github.com/koolshare/qcasoft/blob/master/zerotier/Changelog.txt" target="_blank" class="ks_btn" style="margin-left:5px;" >更新日志</a></span>
 											<span><a type="button" class="ks_btn" href="javascript:void(0);" onclick="get_log(1)" style="margin-left:5px;">查看日志</a></span>
 										</div>
 
