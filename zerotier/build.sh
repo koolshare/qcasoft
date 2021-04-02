@@ -1,7 +1,7 @@
 #!/bin/sh
 
 MODULE="zerotier"
-VERSION="1.3.6"
+VERSION="1.3.7"
 TITLE="ZeroTier"
 DESCRIPTION="ZeroTier 内网穿透"
 HOME_URL="Module_zerotier.asp"

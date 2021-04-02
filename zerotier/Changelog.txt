@@ -1,5 +1,8 @@
 Koolshare Asuswrt-Merlin ZeroTier Changelog for qca-ipq806x platform
 ===========================================
+1.3.7
+   - fix	修复加入zerotier网络的图标不显示的问题
+
 1.3.1 - 1.3.6
    - update	优化字体显示。
    - fix	修复状态刷新问题。

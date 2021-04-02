@@ -130,13 +130,13 @@ i {
 	color:#FFFFFF;
 }
 .remove_btn{
-	background: transparent url(/res/accountdelete.png) no-repeat scroll center top;
+	background: transparent url(/res/zt_del.png) no-repeat scroll center top;
 }
 .edit_btn{
-  background: transparent url(/res/accountedit.png) no-repeat scroll center top;
+  background: transparent url(/res/zt_edt.png) no-repeat scroll center top;
 }
 .add_btn{
-	background: transparent url(/res/accountadd.png) no-repeat scroll center top;
+	background: transparent url(/res/zt_add.png) no-repeat scroll center top;
 }
 .ks_btn {
 	border:none;
