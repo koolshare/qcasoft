@@ -4,7 +4,7 @@ export KSROOT=/koolshare
 export PERP_BASE=$KSROOT/perp
 export PATH=$KSROOT/bin:$KSROOT/scripts:$PATH
 
-alias echo_date='echo ¡¾$(TZ=UTC-8 date -R +%YÄê%mÔÂ%dÈÕ\ %X)¡¿:'
+alias echo_date='echo ã€$(TZ=UTC-8 date -R +%Yå¹´%mæœˆ%dæ—¥\ %X)ã€‘:'
 
 ACTION=$1
 ID=$1
