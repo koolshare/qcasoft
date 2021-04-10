@@ -1,6 +1,9 @@
 Koolshare qca softeware center Changelog
 ===========================================
 1.2.3
+   - fix	修复日志乱码问题；
+
+1.2.3
    - update	更新优化软件中心在线/离线安装逻辑；
    - fix	修复部分插件开机启动无法运行的问题；
    - add	新增services-stop触发脚本，其触发的脚本示例：/koolshare/init.d/T99xxx.sh
