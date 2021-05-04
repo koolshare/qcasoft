@@ -132,19 +132,6 @@ clean(){
 	dbus remove soft_name
 }
 
-detect_package(){
-	local TEST_WORD="$1"
-	local ILLEGAL_KEYWORDS="ss|ssr|shadowsocks|shadowsocksr|v2ray|trojan|clash|wireguard|koolss|brook|fuck"
-	local KEY_MATCH=$(echo "${TEST_WORD}" | grep -vi "ssid" | grep -Eio "${ILLEGAL_KEYWORDS}")
-	
-	if [ -n "${KEY_MATCH}" ]; then
-		echo_date "检测到离线安装包：${TAR_NAME} 含非法关键词！！！"
-		echo_date "根据法律规定，koolshare软件中心将不会安装此插件！！！"
-		echo_date "删除相关文件并退出..."
-		exit_tar_install 1
-	fi
-}
-
 exit_tar_install(){
 	local CODE=$1
 	local NAME=$2
@@ -182,7 +169,7 @@ install_tar(){
 	fi
 
 	# 3. detect package name for special characters
-	local S_MATCH=$(echo "${TAR_NAME}"|grep -Eo "\s|\%|\@|\#|\￥|\$|\#|\&|\*|\!")
+	local S_MATCH=$(echo "${TAR_NAME}"|grep -Eo " |\%|\@|\#|\￥|\$|\#|\&|\*|\!")
 	if [ -n "${S_MATCH}" ];then
 		echo_date "检测到你的离线安装包名：${TAR_NAME}含有特殊字符！"
 		echo_date "建议将离线安装名更改为全英文，且不要有空格等特殊字符！"
@@ -198,9 +185,6 @@ install_tar(){
 		echo_date "退出本次离线安装！"
 		exit_tar_install 1
 	fi	
-
-	# 5. do something here for package name
-	detect_package "${TAR_NAME}"
 
 	# 6. check if xxx.tar.gz file exist.
 	if [ ! -f "${TARGET_DIR}/${TAR_NAME}" ];then
@@ -258,9 +242,6 @@ install_tar(){
 			exit_tar_install 1
 		fi
 	fi
-
-	# 12. do something here for package real name
-	detect_package "${MODULE_NAME}"
 
 	# 13. some package not come from koolshare
 	if [ ! -f "/tmp/${MODULE_NAME}/webs/Module_${MODULE_NAME}.asp" -a "${MODULE_NAME}" != "softcenter" ];then
