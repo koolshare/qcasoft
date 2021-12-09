@@ -58,19 +58,19 @@
         }, 
         {
             "author": "sadog", 
-            "build_date": "2021-12-09_20:47:45", 
+            "build_date": "2021-12-10_00:23:51", 
             "changelog": "", 
             "description": "CFE工具箱，查看CFE信息，改机器为国区", 
             "home_url": "Module_cfetool.asp", 
             "link": "", 
-            "md5": "b07511800e9ce888f31f4a61ff814b32", 
+            "md5": "87e0219f633452a0b9d1db3794725967", 
             "name": "cfetool", 
             "port": "8083", 
             "server": "42.192.18.234", 
             "tags": "系统 工具", 
             "tar_url": "cfetool/cfetool.tar.gz", 
             "title": "CFE工具箱", 
-            "version": "1.0"
+            "version": "1.1"
         }, 
         {
             "author": "freexiaoyao", 
