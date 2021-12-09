@@ -1,0 +1,5 @@
+Koolshare Asuswrt-Merlin cfetool Changelog for qca platform
+===========================================
+
+1.0
+   - add	添加CFE工具箱插件，查看CFE信息，改机器为国区。
