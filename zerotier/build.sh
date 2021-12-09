@@ -1,11 +1,14 @@
 #!/bin/sh
 
+# build script for qcasoft project
+
 MODULE="zerotier"
 VERSION="1.3.7"
 TITLE="ZeroTier"
 DESCRIPTION="ZeroTier 内网穿透"
 HOME_URL="Module_zerotier.asp"
-
+TAGS="穿透 VPN"
+AUTHOR="sadog"
 
 # Check and include base
 DIR="$( cd "$( dirname "$BASH_SOURCE[0]" )" && pwd )"

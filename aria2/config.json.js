@@ -1,9 +1,12 @@
 {
 "version":"2.3",
-"md5":"e88380d9aa78a759b7e56690c97f95f8",
+"md5":"9c90573d94bdb251630e60d075c63178",
 "home_url":"Module_aria2.asp",
 "title":"aria2",
 "description":"linux下载利器",
+"tags":"下载 USB",
+"author":"sadog",
+"link":"",
 "changelog":"",
-"build_date":"2020-09-28_23:25:42"
+"build_date":"2021-12-09_20:18:27"
 }

@@ -1,10 +1,14 @@
 #!/bin/sh
 
+# build script for qcasoft project
+
 MODULE="cfddns"
 VERSION="1.0"
 TITLE="CloudFlare DDNS"
 DESCRIPTION="CloudFlare DDNS"
 HOME_URL="Module_cfddns.asp"
+TAGS="DDNS"
+AUTHOR="sadog"
 
 # Check and include base
 DIR="$( cd "$( dirname "$BASH_SOURCE[0]" )" && pwd )"

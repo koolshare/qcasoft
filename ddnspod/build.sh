@@ -1,22 +1,17 @@
 #!/bin/sh
 
+# build script for qcasoft project
+
 MODULE="ddnspod"
 VERSION="1.5"
 TITLE="ddnspod"
 DESCRIPTION="ddnspod"
 HOME_URL="Module_ddnspod.asp"
+TAGS="DDNS"
+AUTHOR="freexiaoyao"
 
 # Check and include base
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-if [ "$MODULE" == "" ]; then
-	echo "module not found"
-	exit 1
-fi
-
-if [ -f "$DIR/$MODULE/$MODULE/install.sh" ]; then
-	echo "install script not found"
-	exit 2
-fi
+DIR="$( cd "$( dirname "$BASH_SOURCE[0]" )" && pwd )"
 
 # now include build_base.sh
 . $DIR/../softcenter/build_base.sh

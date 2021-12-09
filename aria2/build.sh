@@ -1,10 +1,14 @@
 #!/bin/sh
 
+# build script for qcasoft project
+
 MODULE="aria2"
 VERSION="2.3"
 TITLE="aria2"
 DESCRIPTION="linux下载利器"
 HOME_URL="Module_aria2.asp"
+TAGS="下载 USB"
+AUTHOR="sadog"
 
 # Check and include base
 DIR="$( cd "$( dirname "$BASH_SOURCE[0]" )" && pwd )"

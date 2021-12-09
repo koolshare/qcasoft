@@ -1,10 +1,14 @@
 #!/bin/sh
 
+# build script for qcasoft project
+
 MODULE="mdial"
 VERSION="1.3"
 TITLE="单线多拨"
 DESCRIPTION="pppoe单线多拨，带宽提升神器！"
 HOME_URL="Module_mdial.asp"
+TAGS="网络"
+AUTHOR="sadog"
 
 # Check and include base
 DIR="$( cd "$( dirname "$BASH_SOURCE[0]" )" && pwd )"

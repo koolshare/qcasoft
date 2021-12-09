@@ -1,10 +1,14 @@
 #!/bin/sh
 
+# build script for qcasoft project
+
 MODULE="fastd1ck"
 VERSION="1.8"
 TITLE="迅雷快鸟"
 DESCRIPTION="迅雷快鸟，上网必备神器"
 HOME_URL="Module_fastd1ck.asp"
+TAGS="网络"
+AUTHOR="sadog"
 
 # Check and include base
 DIR="$( cd "$( dirname "$BASH_SOURCE[0]" )" && pwd )"
