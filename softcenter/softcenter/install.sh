@@ -11,7 +11,6 @@
 
 alias echo_date='echo 【$(TZ=UTC-8 date -R +%Y年%m月%d日\ %X)】:'
 MODEL=
-UI_TYPE=ASUSWRT
 FW_TYPE_CODE=
 FW_TYPE_NAME=
 DIR=$(cd $(dirname $0); pwd)
@@ -48,42 +47,38 @@ get_fw_type() {
 	fi
 }	
 
-get_ui_type(){
-	# default value
-	[ "${MODEL}" == "RT-AC86U" ] && local ROG_RTAC86U=0
-	[ "${MODEL}" == "GT-AC2900" ] && local ROG_GTAC2900=1
-	[ "${MODEL}" == "GT-AC5300" ] && local ROG_GTAC5300=1
-	[ "${MODEL}" == "GT-AX11000" ] && local ROG_GTAX11000=1
-	[ "${MODEL}" == "GT-AXE11000" ] && local ROG_GTAXE11000=1
-	local KS_TAG=$(nvram get extendno|grep koolshare)
-	local EXT_NU=$(nvram get extendno)
-	local EXT_NU=$(echo ${EXT_NU%_*} | grep -Eo "^[0-9]{1,10}$")
-	local BUILDNO=$(nvram get buildno)
-	[ -z "${EXT_NU}" ] && EXT_NU="0"
-	# RT-AC86U
-	if [ -n "${KS_TAG}" -a "${MODEL}" == "RT-AC86U" -a "${EXT_NU}" -lt "81918" -a "${BUILDNO}" != "386" ];then
-		# RT-AC86U的官改固件，在384_81918之前的固件都是ROG皮肤，384_81918及其以后的固件（包括386）为ASUSWRT皮肤
-		ROG_RTAC86U=1
-	fi
-	# GT-AC2900
-	if [ "${MODEL}" == "GT-AC2900" ] && [ "${FW_TYPE_CODE}" == "3" -o "${FW_TYPE_CODE}" == "4" ];then
-		# GT-AC2900从386.1开始已经支持梅林固件，其UI是ASUSWRT
-		ROG_GTAC2900=0
-	fi
-	# GT-AX11000
-	if [ "${MODEL}" == "GT-AX11000" -o "${MODEL}" == "GT-AX11000_BO4" ] && [ "${FW_TYPE_CODE}" == "3" -o "${FW_TYPE_CODE}" == "4" ];then
-		# GT-AX11000从386.2开始已经支持梅林固件，其UI是ASUSWRT
-		ROG_GTAX11000=0
-	fi
-	# ROG UI
-	if [ "${ROG_GTAC5300}" == "1" -o "${ROG_RTAC86U}" == "1" -o "${ROG_GTAC2900}" == "1" -o "${ROG_GTAX11000}" == "1" -o "${ROG_GTAXE11000}" == "1" ];then
-		# GT-AC5300、RT-AC86U部分版本、GT-AC2900部分版本、GT-AX11000部分版本、GT-AXE11000全部版本，骚红皮肤
+set_skin(){
+	# new nethod: use nvram value to set skin
+	local UI_TYPE=ASUSWRT
+	local SC_SKIN=$(nvram get sc_skin)
+	local ROG_FLAG=$(grep -o "680516" /www/form_style.css|head -n1)
+	local TUF_FLAG=$(grep -o "D0982C" /www/form_style.css|head -n1)
+	if [ -n "${ROG_FLAG}" ];then
 		UI_TYPE="ROG"
 	fi
-	# TUF UI
-	if [ "${MODEL%-*}" == "TUF" ];then
-		# 官改固件，橙色皮肤
+	if [ -n "${TUF_FLAG}" ];then
 		UI_TYPE="TUF"
+	fi
+	
+	if [ -z "${SC_SKIN}" -o "${SC_SKIN}" != "${UI_TYPE}" ];then
+		nvram set sc_skin="${UI_TYPE}"
+		nvram commit
+	fi
+}
+
+set_url(){
+	# set url
+	local LINUX_VER=$(uname -r|awk -F"." '{print $1$2}')
+	if [ "${LINUX_VER}" -ge "41" ];then
+		local SC_URL=https://rogsoft.ddnsto.com
+	fi
+	if [ "${LINUX_VER}" -eq "26" ];then
+		local SC_URL=https://armsoft.ddnsto.com
+	fi
+	local SC_URL_NVRAM=$(nvram get sc_url)
+	if [ -z "${SC_URL_NVRAM}" -o "${SC_URL_NVRAM}" != "${SC_URL}" ];then
+		nvram set sc_url=${SC_URL}
+		nvram commit
 	fi
 }
 
@@ -133,6 +128,10 @@ center_install() {
 		return 1
 	fi
 
+	# remove some value discard exist
+	nvram unset rc_service
+	nvram commit
+
 	local CENTER_TYPE_1=$(cat /tmp/${module}/webs/Module_Softcenter.asp | grep -Eo "/softcenter/app.json.js")
 	if [ -z "${CENTER_TYPE_1}" ];then
 		echo_date "准备安装软件中心：koolcenter ..."
@@ -140,21 +139,6 @@ center_install() {
 		echo_date "准备安装软件中心：softcenter ..."
 	fi
 
-	# if [ -z "${CENTER_TYPE_1}" ];then
-	# 	# 安装koolcenter的话，检查softcenter版本号是否符合
-	# 	local NEED_VERSION="1.7.6"
-	# 	if [ -f "/koolshare/.soft_ver" ];then
-	# 		local CUR_VERSION=$(cat /koolshare/.soft_ver)
-	# 	else
-	# 		local CUR_VERSION="0"
-	# 	fi
-	# 	local COMP=$(/rom/etc/koolshare/bin/versioncmp ${CUR_VERSION} ${NEED_VERSION})
-	# 	if [ "${COMP}" == "1" ]; then
-	# 		echo_date "softcenter软件中心版本：${CUR_VERSION} 过低，不支持koolcenter升级，请将软件中心更新到最新后重试！" 
-	# 		exit 1
-	# 	fi
-	# fi	
-	
 	# make some folders
 	echo_date "创建软件中心相关的文件夹..."
 	mkdir -p /${KSHOME}/configs/dnsmasq.d
@@ -216,54 +200,33 @@ center_install() {
 	cp -rf /tmp/${module}/webs/* /${KSHOME}/.koolshare/webs/
 	cp -rf /tmp/${module}/res/* /${KSHOME}/.koolshare/res/
 
-	# ----ui------
-	get_ui_type
-	if [ -z "${CENTER_TYPE_1}" ];then
-		# wirte skin code for softcenter
-		echo_date "为koolcenter软件中心安装${UI_TYPE}风格的皮肤..."
-		nvram set sc_skin="${UI_TYPE}"
-	else
-		# compatiable wit softcenter
-		echo_date "获取当前固件UI类型，UI_TYPE: ${UI_TYPE}"
-		if [ "${UI_TYPE}" == "ROG" ]; then
-			echo_date "为软件中心安装ROG风格的皮肤..."
-			cp -rf /tmp/${module}/ROG/res/* /${KSHOME}/.koolshare/res/
-		elif [ "${UI_TYPE}" == "TUF" ]; then
-			echo_date "为软件中心安装TUF风格的皮肤..."
-			sed -i 's/3e030d/3e2902/g;s/91071f/92650F/g;s/680516/D0982C/g;s/cf0a2c/c58813/g;s/700618/74500b/g;s/530412/92650F/g' /tmp/${module}/ROG/res/*.css >/dev/null 2>&1
-			sed -i 's/3e030d/3e2902/g;s/91071f/92650F/g;s/680516/D0982C/g;s/cf0a2c/c58813/g;s/700618/74500b/g;s/530412/92650F/g' /tmp/${module}/webs/*.asp >/dev/null 2>&1
-			cp -rf /tmp/${module}/ROG/res/* /${KSHOME}/.koolshare/res/
-		elif [ "${UI_TYPE}" == "ASUSWRT" ]; then
-			echo_date "为软件中心安装ASUSWRT风格的皮肤..."
-			if [ -f "/${KSHOME}/.koolshare/webs/Module_Softsetting.asp" ];then
-				sed -i '/rogcss/d' /${KSHOME}/.koolshare/webs/Module_Softsetting.asp >/dev/null 2>&1
-			fi
-		fi
-	fi
-	# -------------
+	# set ui for softcenter & koolcenter
+	set_skin
+	
+	# start to install files
 	cp -rf /tmp/${module}/init.d/* /${KSHOME}/.koolshare/init.d/
 	cp -rf /tmp/${module}/bin/* /${KSHOME}/.koolshare/bin/
-	#for axhnd
-	if [ "${MODEL}" == "RT-AX88U" -o "${MODEL}" == "GT-AX11000" -o "${MODEL}" == "RT-AX86U" -o "${MODEL}" == "RT-AX68U" ];then
-		cp -rf /tmp/${module}/axbin/* /${KSHOME}/.koolshare/bin/
-	fi
 	cp -rf /tmp/${module}/perp /${KSHOME}/.koolshare/
 	cp -rf /tmp/${module}/scripts /${KSHOME}/.koolshare/
 	cp -rf /tmp/${module}/.soft_ver /${KSHOME}/.koolshare/
 	echo_date "文件复制结束，开始创建相关的软连接..."
+	
+	# ssh PATH environment
+	rm -rf /jffs/configs/profile.add >/dev/null 2>&1
+	rm -rf /jffs/etc/profile >/dev/null 2>&1
+	source_file=$(cat /etc/profile|grep -v nvram|awk '{print $NF}'|grep -E "profile"|grep "jffs"|grep "/")
+	source_path=$(dirname $source_file)
+	if [ -n "${source_file}" -a -n "${source_path}" -a -f "/jffs/.koolshare/scripts/base.sh" ];then
+		rm -rf ${source_file} >/dev/null 2>&1
+		mkdir -p ${source_path}
+		ln -sf /jffs/.koolshare/scripts/base.sh ${source_file} >/dev/null 2>&1
+	fi
+	
 	# make some link
 	[ ! -L "/${KSHOME}/.koolshare/bin/base64_decode" ] && ln -sf /${KSHOME}/.koolshare/bin/base64_encode /${KSHOME}/.koolshare/bin/base64_decode
 	[ ! -L "/${KSHOME}/.koolshare/scripts/ks_app_remove.sh" ] && ln -sf /${KSHOME}/.koolshare/scripts/ks_app_install.sh /${KSHOME}/.koolshare/scripts/ks_app_remove.sh
 	[ ! -L "/${KSHOME}/.asusrouter" ] && ln -sf /${KSHOME}/.koolshare/bin/kscore.sh /${KSHOME}/.asusrouter
 	[ -L "/${KSHOME}/.koolshare/bin/base64" ] && rm -rf /${KSHOME}/.koolshare/bin/base64
-	if [ -n "$(nvram get extendno | grep koolshare)" ];then
-		# for offcial mod, RT-AC86U, GT-AC5300, TUF-AX3000, RT-AX86U, etc
-		[ ! -L "/${KSHOME}/etc/profile" ] && ln -sf /${KSHOME}/.koolshare/scripts/base.sh /${KSHOME}/etc/profile
-	else
-		# for Merlin mod, RT-AX88U, RT-AC86U, etc
-		[ ! -L "/${KSHOME}/configs/profile.add" ] && ln -sf /${KSHOME}/.koolshare/scripts/base.sh /${KSHOME}/configs/profile.add
-	fi
-	echo_date "软连接创建完成！"
 
 	#============================================
 	# check start up scripts 
@@ -346,9 +309,8 @@ center_install() {
 
 	# reset some default value
 	echo_date "设定一些默认值..."
-	if [ -z "${CENTER_TYPE_1}" ];then
-		nvram set sc_url="https://qcasoft.ddnsto.com"
-	fi
+	set_url
+	
 	if [ -n "$(pidof skipd)" -a -f "/usr/bin/dbus" ];then
 		/usr/bin/dbus set softcenter_installing_todo=""
 		/usr/bin/dbus set softcenter_installing_title=""
@@ -379,10 +341,6 @@ center_install() {
 			dbus set softcenter_version=${SOFTVER}
 		fi
 	fi
-
-	# remove some value discard exist
-	nvram unset rc_service
-	nvram commit
 	#============================================
 	# now try to reboot httpdb if httpdb not started
 	# /koolshare/bin/start-stop-daemon -S -q -x /koolshare/perp/perp.sh
@@ -408,9 +366,19 @@ exit_install(){
 	esac
 }
 
+set_url(){
+	# set url, do it before platform_test
+	local SC_URL=https://qcasoft.ddnsto.com
+	local SC_URL_NVRAM=$(nvram get sc_url)
+	if [ -z "${SC_URL_NVRAM}" -o "${SC_URL_NVRAM}" != "${SC_URL}" ];then
+		nvram set sc_url=${SC_URL}
+		nvram commit
+	fi
+}
+
 platform_test(){
 	local LINUX_VER=$(uname -r|awk -F"." '{print $1$2}')
-	if [ -d "/koolshare" -a -f "/usr/bin/skipd" -a "${LINUX_VER}" -ge "44" ];then
+	if [ -d "/koolshare" -a -f "/usr/bin/skipd" -a "${LINUX_VER}" -eq "44" ];then
 		echo_date 机型："${MODEL} ${FW_TYPE_NAME} 符合安装要求，开始安装软件中心！"
 	else
 		exit_install 1
@@ -439,6 +407,7 @@ install_now(){
 install(){
 	get_model
 	get_fw_type
+	set_url
 	platform_test
 	install_now
 }

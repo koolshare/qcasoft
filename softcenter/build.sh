@@ -2,7 +2,7 @@
 
 # build script for qcasoft project
 
-VERSION=1.2.7
+VERSION=1.2.8
 
 echo $VERSION > ./softcenter/.soft_ver
 
