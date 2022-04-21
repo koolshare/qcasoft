@@ -1,5 +1,8 @@
 Koolshare Hnd router software center Let's Encrypt Changelog
 ===========================================
+3.4
+   - fix	修复RT-AX89X最新官改固件证书安装不正确的问题
+
 3.0
          注意：升级2.8及其以后版本，如果遇到证书丢失，请重新申请证书！
    - fix	修复开机启动后无法安装证书的问题；

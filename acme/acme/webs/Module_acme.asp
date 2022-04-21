@@ -219,6 +219,11 @@ function delete_cert(){
 	}
 }
 
+function install_cert(){
+	var dbus = {}
+	push_data(dbus, 4);
+}
+
 function push_data(obj, arg) {
 	var id = parseInt(Math.random() * 100000000);
 	var postData = {"id": id, "method": "acme_config.sh", "params": [arg], "fields": obj };
@@ -428,7 +433,7 @@ function show_log(){
 											<div style="margin:30px 0 10px 5px;" class="splitLine"></div>
 											<div class="SimpleNote">
 												<li>Let's Encrypt是2015年三季度成立的数字证书认证机构，旨在推广互联网无所不在的加密连接，为安全网站提供免费的SSL/TLS证书。
-												<li>本插件使用acme.sh，通过dns_api申请ssl证书，目前支持aliyun、Dnspod、CloudXNS、CloudFlare、Godaddy。 <a type="button" style="cursor:pointer" href="https://github.com/koolshare/qcasoft/blob/master/acme/Changelog.txt" target="_blank"><em>【<u>插件更新日志</u>】</em></a></li>
+												<li>本插件使用acme.sh，通过dns_api申请ssl证书，目前支持aliyun、Dnspod、CloudXNS、CloudFlare、Godaddy。 <a type="button" style="cursor:pointer" href="https://github.com/koolshare/rogsoft/blob/master/acme/Changelog.txt" target="_blank"><em>【<u>插件更新日志</u>】</em></a></li>
 											</div>
 											<table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 												<thead>
@@ -581,11 +586,10 @@ function show_log(){
 											<div id="warning" style="font-size:14px;margin:20px auto;"></div>
 											<div class="apply_gen">
 												<input class="button_gen" id="cmdBtn" onClick="save();" type="button" value="提交" />
+												<!--<input class="button_gen" id="cmdBtn" onClick="install_cert();" type="button" value="安装" />-->
 											</div>
 											<div style="margin:30px 0 10px 5px;" class="splitLine"></div>
 											<div class="SimpleNote">
-												<li>本插件仅支持koolshare RT-AC86U、AX88U梅林改版固件，GT-AC5300、GT-AX11000官改固件。</li>
-												<li>Let's Encrypt的免费证书在2018年3月已经支持泛域名*解析，要使用泛解析请在子域名处填写 *。</li>
 												<li>Let's Encrypt的免费证书只有90天有效期，到期可以自动续期，或者使用手动更新来续期。</li>
 												<li>目前大部分的运营商已经关闭家用宽带80，443端口，如果需要在外网访问请设置端口转发。</li>
 												<li>申请到的证书储存在/koolshare/acme/，且安装在/tmp/etc目录，可自行备份。</li>

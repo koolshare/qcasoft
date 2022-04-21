@@ -2,17 +2,17 @@
     "apps": [
         {
             "author": "sadog", 
-            "build_date": "2021-12-09_20:18:27", 
+            "build_date": "2022-04-21_15:38:48", 
             "changelog": "", 
             "description": "自动部署SSL证书", 
             "home_url": "Module_acme.asp", 
             "link": "https://github.com/acmesh-official/acme.sh", 
-            "md5": "70ad985c4c1374651bbde70b09ab48e9", 
+            "md5": "389260f131937d68121f8a62a71a009b", 
             "name": "acme", 
             "tags": "网络 安全", 
             "tar_url": "acme/acme.tar.gz", 
             "title": "Let's Encrypt", 
-            "version": "3.3"
+            "version": "3.4"
         }, 
         {
             "author": "kyrios, sadog", 

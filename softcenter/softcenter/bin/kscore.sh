@@ -17,18 +17,18 @@ get_fw_type() {
 	if [ -d "/koolshare" ];then
 		if [ -n "${KS_TAG}" ];then
 			FW_TYPE_CODE="2"
-			FW_TYPE_NAME="koolshare�ٸĹ̼�"
+			FW_TYPE_NAME="koolshare官改固件"
 		else
 			FW_TYPE_CODE="4"
-			FW_TYPE_NAME="koolshare÷�ָİ�̼�"
+			FW_TYPE_NAME="koolshare梅林改版固件"
 		fi
 	else
 		if [ "$(uname -o|grep Merlin)" ];then
 			FW_TYPE_CODE="3"
-			FW_TYPE_NAME="÷��ԭ��̼�"
+			FW_TYPE_NAME="梅林原版固件"
 		else
 			FW_TYPE_CODE="1"
-			FW_TYPE_NAME="��˶�ٷ��̼�"
+			FW_TYPE_NAME="华硕官方固件"
 		fi
 	fi
 }
@@ -48,27 +48,27 @@ get_ui_type(){
 	[ -z "${EXT_NU}" ] && EXT_NU="0"
 	# RT-AC86U
 	if [ -n "${KS_TAG}" -a "${MODEL}" == "RT-AC86U" -a "${EXT_NU}" -lt "81918" -a "${BUILDNO}" != "386" ];then
-		# RT-AC86U�ĹٸĹ̼�����384_81918֮ǰ�Ĺ̼�����ROGƤ����384_81918�����Ժ�Ĺ̼�������386��ΪASUSWRTƤ��
+		# RT-AC86U的官改固件，在384_81918之前的固件都是ROG皮肤，384_81918及其以后的固件（包括386）为ASUSWRT皮肤
 		ROG_RTAC86U=1
 	fi
 	# GT-AC2900
 	if [ "${MODEL}" == "GT-AC2900" ] && [ "${FW_TYPE_CODE}" == "3" -o "${FW_TYPE_CODE}" == "4" ];then
-		# GT-AC2900��386.1��ʼ�Ѿ�֧��÷�ֹ̼�����UI��ASUSWRT
+		# GT-AC2900从386.1开始已经支持梅林固件，其UI是ASUSWRT
 		ROG_GTAC2900=0
 	fi
 	# GT-AX11000
 	if [ "${MODEL}" == "GT-AX11000" -o "${MODEL}" == "GT-AX11000_BO4" ] && [ "${FW_TYPE_CODE}" == "3" -o "${FW_TYPE_CODE}" == "4" ];then
-		# GT-AX11000��386.2��ʼ�Ѿ�֧��÷�ֹ̼�����UI��ASUSWRT
+		# GT-AX11000从386.2开始已经支持梅林固件，其UI是ASUSWRT
 		ROG_GTAX11000=0
 	fi
 	# ROG UI
 	if [ "${ROG_GTAC5300}" == "1" -o "${ROG_RTAC86U}" == "1" -o "${ROG_GTAC2900}" == "1" -o "${ROG_GTAX11000}" == "1" -o "${ROG_GTAXE11000}" == "1" ];then
-		# GT-AC5300��RT-AC86U���ְ汾��GT-AC2900���ְ汾��GT-AX11000���ְ汾��GT-AXE11000ȫ���汾��ɧ��Ƥ��
+		# GT-AC5300、RT-AC86U部分版本、GT-AC2900部分版本、GT-AX11000部分版本、GT-AXE11000全部版本，骚红皮肤
 		UI_TYPE="ROG"
 	fi
 	# TUF UI
 	if [ "${MODEL%-*}" == "TUF" ];then
-		# �ٸĹ̼�����ɫƤ��
+		# 官改固件，橙色皮肤
 		UI_TYPE="TUF"
 	fi
 }
