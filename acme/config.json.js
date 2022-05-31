@@ -1,6 +1,6 @@
 {
-"version":"3.4",
-"md5":"389260f131937d68121f8a62a71a009b",
+"version":"3.5",
+"md5":"08cac62433f320cacbb97553bff41161",
 "home_url":"Module_acme.asp",
 "title":"Let's Encrypt",
 "description":"自动部署SSL证书",
@@ -8,5 +8,5 @@
 "author":"sadog",
 "link":"https://github.com/acmesh-official/acme.sh",
 "changelog":"",
-"build_date":"2022-04-21_15:38:48"
+"build_date":"2022-05-31_16:25:01"
 }

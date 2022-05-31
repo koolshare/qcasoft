@@ -3,7 +3,7 @@
 # build script for qcasoft project
 
 MODULE="acme"
-VERSION="3.4"
+VERSION="3.5"
 TITLE="Let's Encrypt"
 DESCRIPTION="自动部署SSL证书"
 HOME_URL="Module_acme.asp"

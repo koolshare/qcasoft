@@ -54,7 +54,7 @@ start_issue(){
 	sleep 1
 	cd ${acme_root}
 	#./acme.sh --home "$acme_root" --issue --dns $dnsapi -d $acme_domain -d $acme_subdomain.$acme_domain --use-wget --log-level 2 --debug
-	./acme.sh --home "${acme_root}" --issue --dns ${dnsapi} -d ${acme_subdomain}.${acme_domain} --use-wget --insecure
+	./acme.sh --home "${acme_root}" --issue --server letsencrypt --dns ${dnsapi} -d ${acme_subdomain}.${acme_domain} --use-wget --insecure --log-level 2 --debug
 }
 
 install_cert(){

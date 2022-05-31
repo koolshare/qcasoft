@@ -1,5 +1,11 @@
 Koolshare Hnd router software center Let's Encrypt Changelog
 ===========================================
+3.5
+   - update	acme.sh升级到3.0.5
+   - update	显示更详细的日志
+   - update	强制使用Let's Encrypt机构进行证书申请
+   - fix	修复acme.sh使用被墙dns解析导致证书申请卡住的问题
+
 3.4
    - fix	修复RT-AX89X最新官改固件证书安装不正确的问题
 
