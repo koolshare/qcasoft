@@ -1,5 +1,5 @@
 [
-{"module": "linkease", "branch":"main", "git_source": "https://github.com/koolshare/rogsoft_LinkEase.git"},
-{"module": "filebrowser", "branch":"main", "git_source": "https://github.com/flyhigherpi/filebrowser.git"},
-{"module": "signdog", "branch":"main", "git_source": "https://github.com/koolshare/signdog_hnd.git"}
+{"module": "linkease", "branch":"master", "git_source": "https://github.com/koolshare/rogsoft_LinkEase.git"},
+{"module": "filebrowser", "branch":"master", "git_source": "https://github.com/flyhigherpi/filebrowser.git"},
+{"module": "signdog", "branch":"master", "git_source": "https://github.com/koolshare/signdog_hnd.git"}
 ]
